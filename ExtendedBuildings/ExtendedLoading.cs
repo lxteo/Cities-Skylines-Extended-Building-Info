@@ -8,10 +8,10 @@ using UnityEngine;
 
 namespace ExtendedBuildings
 {
-    class ExtendedLoading : LoadingExtensionBase
+    public class ExtendedLoading : LoadingExtensionBase
     {
-        static GameObject buildingWinCOMPANYGameObject;
-        BuildingInfoWindow buildingWindow;
+        static GameObject buildingWindowGameObject;
+        BuildingInfoWindow6 buildingWindow;
         private LoadMode _mode;
 
         public override void OnLevelLoaded(LoadMode mode)
@@ -19,15 +19,18 @@ namespace ExtendedBuildings
             if (mode != LoadMode.LoadGame && mode != LoadMode.NewGame)
                 return;
             _mode = mode;
-            buildingWinCOMPANYGameObject = new GameObject("BuildingWinCOMPANY");
+
+            buildingWindowGameObject = new GameObject("buildingWindowObject");
 
             var buildingInfo = UIView.Find<UIPanel>("(Library) ZonedBuildingWorldInfoPanel");
-            this.buildingWindow = buildingWinCOMPANYGameObject.AddComponent<BuildingInfoWindow>();
+            this.buildingWindow = buildingWindowGameObject.AddComponent<BuildingInfoWindow6>();
             this.buildingWindow.transform.parent = buildingInfo.transform;
             this.buildingWindow.size = new Vector3(buildingInfo.size.x, buildingInfo.size.y);
-            //this.buildingWindow.ba = buildingInfo.gameObject.transform.GetComponentInChildren<ZonedBuildingWorldInfoPanel>();
-            this.buildingWindow.position = new Vector3(0, -20);
+            this.buildingWindow.baseBuildingWindow = buildingInfo.gameObject.transform.GetComponentInChildren<ZonedBuildingWorldInfoPanel>();
+            this.buildingWindow.position = new Vector3(0, 12);
             buildingInfo.eventVisibilityChanged += buildingInfo_eventVisibilityChanged;
+
+            DebugOutputPanel.AddMessage(ColossalFramework.Plugins.PluginManager.MessageType.Message, "Loaded Extended Building Information Mod");
         }
 
         public override void OnLevelUnloading()
@@ -43,9 +46,9 @@ namespace ExtendedBuildings
                 }
             }
 
-            if (buildingWinCOMPANYGameObject != null)
+            if (buildingWindowGameObject != null)
             {
-                GameObject.Destroy(buildingWinCOMPANYGameObject);
+                GameObject.Destroy(buildingWindowGameObject);
             }
         }
 

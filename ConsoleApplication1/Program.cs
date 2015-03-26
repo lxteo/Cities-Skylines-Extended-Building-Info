@@ -9,12 +9,12 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            var markov = new ExtendedBuildings.Markov("ExtendedBuildings.markov.descriptionsWorkplaces.txt");
-            Console.Write(markov.GetText(1400));
+            var markov = new ExtendedBuildings.Markov(ExtendedBuildings.Properties.Resources.descriptionsWorkplaces, false, 6);
+            //var markov = new ExtendedBuildings.Markov("ExtendedBuildings.markov.descriptionsWorkplaces.txt", false, 6);
+            Console.Write(markov.GetText(120, 220, true));
             var x = Console.ReadLine();
-            if (x=="")
+            if (x == "")
             {
-                Console.Write(markov.GetText(1400));
             }
         }
     }

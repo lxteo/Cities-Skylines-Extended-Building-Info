@@ -8,19 +8,19 @@ namespace ExtendedBuildings
 {
     public class ExtendedBuildingsMod : IUserMod
     {
-            public string Name
+        public string Name
+        {
+            get
             {
-                get
-                {
-                    return "Extended Building Information Mod";
-                }
+                return "Extended Building Information Mod";
             }
-            public string Description
+        }
+        public string Description
+        {
+            get
             {
-                get
-                {
-                    return "Displays level up requirements, a random bulding name, and company description.";
-                }
+                return "Displays level up requirements, a random bulding name, and company description.";
             }
+        }
     }
 }
