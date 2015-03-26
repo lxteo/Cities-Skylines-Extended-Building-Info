@@ -64,9 +64,39 @@ namespace ExtendedBuildings.Properties {
         ///   Looks up a localized string similar to COMPANY was founded in DATE with the vision to apply creative thinking and state-of-the-art technology to traditionally low-tech industries, bolstered by a corporate culture renowned for putting customer service first. Based in Chattanooga, Tennessee, the COMPANY family of companies has become a global leader in the manufacture of equipment for asphalt road building, aggregate processing, oil, gas and water well drilling and wood processing, among others.
         ///COMPANY is a global management consulting firm that [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string descriptionsWorkplaces {
+        public static string descriptionsCommercial {
             get {
-                return ResourceManager.GetString("descriptionsWorkplaces", resourceCulture);
+                return ResourceManager.GetString("descriptionsCommercial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to COMPANY was founded in DATE with the vision to apply creative thinking and state-of-the-art technology to traditionally low-tech industries, bolstered by a corporate culture renowned for putting customer service first. Based in Chattanooga, Tennessee, the COMPANY family of companies has become a global leader in the manufacture of equipment for asphalt road building, aggregate processing, oil, gas and water well drilling and wood processing, among others.
+        ///COMPANY is a global management consulting firm that [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string descriptionsIndustrial {
+            get {
+                return ResourceManager.GetString("descriptionsIndustrial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to COMPANY was founded in DATE with the vision to apply creative thinking and state-of-the-art technology to traditionally low-tech industries, bolstered by a corporate culture renowned for putting customer service first. Based in Chattanooga, Tennessee, the COMPANY family of companies has become a global leader in the manufacture of equipment for asphalt road building, aggregate processing, oil, gas and water well drilling and wood processing, among others.
+        ///COMPANY is a global management consulting firm that [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string descriptionsOffices {
+            get {
+                return ResourceManager.GetString("descriptionsOffices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to COMPANY was founded in DATE with the vision to apply creative thinking and state-of-the-art technology to traditionally low-tech industries, bolstered by a corporate culture renowned for putting customer service first. Based in Chattanooga, Tennessee, the COMPANY family of companies has become a global leader in the manufacture of equipment for asphalt road building, aggregate processing, oil, gas and water well drilling and wood processing, among others.
+        ///COMPANY is a global management consulting firm that [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string descriptionsResidential {
+            get {
+                return ResourceManager.GetString("descriptionsResidential", resourceCulture);
             }
         }
         
@@ -88,9 +118,81 @@ namespace ExtendedBuildings.Properties {
         ///Blue Steel Mill
         ///Rock and Co [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string nameWorkplaces {
+        public static string nameCommercial {
             get {
-                return ResourceManager.GetString("nameWorkplaces", resourceCulture);
+                return ResourceManager.GetString("nameCommercial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ceritfied Earth Movers Inc.
+        ///Barkley&apos;s Gold Digger Industries
+        ///Ballarat Bedrock Mines Corproration 
+        ///The Boulder Quarry Syndicate
+        ///Family Gravel Business Enterprise
+        ///Doug&apos;s Titanium Miner Union
+        ///Grandma&apos;s Aluminium Deposit Association
+        ///Eureka Silver Reserves Multinational
+        ///Klondike&apos;s Copper Trade Company
+        ///Plinkett&apos;s Chromium Collector Organisation
+        ///Walter&apos;s Platinum Merchant Congolomorate
+        ///Californian Uranium Holdings League
+        ///Crystal&apos;s Iron Fist Alliance
+        ///Heavy Metal Industries
+        ///Blue Steel Mill
+        ///Rock and Co [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string nameIndustrial {
+            get {
+                return ResourceManager.GetString("nameIndustrial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ceritfied Earth Movers Inc.
+        ///Barkley&apos;s Gold Digger Industries
+        ///Ballarat Bedrock Mines Corproration 
+        ///The Boulder Quarry Syndicate
+        ///Family Gravel Business Enterprise
+        ///Doug&apos;s Titanium Miner Union
+        ///Grandma&apos;s Aluminium Deposit Association
+        ///Eureka Silver Reserves Multinational
+        ///Klondike&apos;s Copper Trade Company
+        ///Plinkett&apos;s Chromium Collector Organisation
+        ///Walter&apos;s Platinum Merchant Congolomorate
+        ///Californian Uranium Holdings League
+        ///Crystal&apos;s Iron Fist Alliance
+        ///Heavy Metal Industries
+        ///Blue Steel Mill
+        ///Rock and Co [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string nameOffices {
+            get {
+                return ResourceManager.GetString("nameOffices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ceritfied Earth Movers Inc.
+        ///Barkley&apos;s Gold Digger Industries
+        ///Ballarat Bedrock Mines Corproration 
+        ///The Boulder Quarry Syndicate
+        ///Family Gravel Business Enterprise
+        ///Doug&apos;s Titanium Miner Union
+        ///Grandma&apos;s Aluminium Deposit Association
+        ///Eureka Silver Reserves Multinational
+        ///Klondike&apos;s Copper Trade Company
+        ///Plinkett&apos;s Chromium Collector Organisation
+        ///Walter&apos;s Platinum Merchant Congolomorate
+        ///Californian Uranium Holdings League
+        ///Crystal&apos;s Iron Fist Alliance
+        ///Heavy Metal Industries
+        ///Blue Steel Mill
+        ///Rock and Co [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string nameResidential {
+            get {
+                return ResourceManager.GetString("nameResidential", resourceCulture);
             }
         }
     }

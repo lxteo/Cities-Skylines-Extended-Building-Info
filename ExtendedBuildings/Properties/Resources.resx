@@ -118,10 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="descriptionsWorkplaces" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Markov\descriptionsWorkplaces.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="descriptionsCommercial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Markov\descriptionsCommercial.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="nameWorkplaces" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Markov\nameWorkplaces .txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="descriptionsIndustrial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Markov\descriptionsIndustrial.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="descriptionsOffices" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Markov\descriptionsOffices.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="descriptionsResidential" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Markov\descriptionsResidential.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="nameCommercial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Markov\nameCommercial.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="nameIndustrial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Markov\nameIndustrial.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="nameOffices" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Markov\nameOffices .txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="nameResidential" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Markov\nameResidential.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

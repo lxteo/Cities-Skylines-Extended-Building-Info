@@ -13,7 +13,7 @@ namespace ExtendedBuildings
     using System.Reflection;
     using System.Timers;
     using UnityEngine;
-    public class BuildingInfoWindow6 : UIPanel
+    public class BuildingInfoWindow7 : UIPanel
     {
         const float vertPadding = 26;
         float barWidth;
@@ -84,8 +84,8 @@ namespace ExtendedBuildings
             happyLabel = AddUIComponent<UILabel>();
             happyBar = AddUIComponent<UIProgressBar>();
 
-            buildingNames = new Markov(Properties.Resources.nameWorkplaces, false, 4);
-            buildingDescriptions = new Markov(Properties.Resources.descriptionsWorkplaces, false, 7);
+            buildingNames = new Markov(Properties.Resources.nameCommercial, false, 4);
+            buildingDescriptions = new Markov(Properties.Resources.descriptionsCommercial, false, 7);
 
             descriptionLabel = AddUIComponent<UILabel>();
 
@@ -130,7 +130,7 @@ namespace ExtendedBuildings
             base.Start();
 
             backgroundSprite = "MenuPanel2";
-            opacity = 0.75f;
+            opacity = 0.8f;
             isVisible = true;
             canFocus = true;
             isInteractive = true;
@@ -351,7 +351,7 @@ namespace ExtendedBuildings
             }
 
             var bName = this.buildingName.text;
-            if (setName != buildingId && buildingName != null && (data.m_flags & Building.Flags.CustomName) == Building.Flags.None && !this.buildingName.hasFocus)
+            if (buildingName != null && (data.m_flags & Building.Flags.CustomName) == Building.Flags.None && !this.buildingName.hasFocus)
             {
                 bName = GetName(buildingId, zone);
                 this.buildingName.text = bName;
@@ -387,7 +387,7 @@ namespace ExtendedBuildings
             Randomizer randomizer = new Randomizer(buildingId);
             if (buildingId % 4 != 0 && zone == ItemClass.Zone.Industrial || zone == ItemClass.Zone.Office)
             {
-                return this.buildingNames.GetText(ref randomizer, 30, 80, true);                
+                return this.buildingNames.GetText(ref randomizer, 14, 80, true);                
             }
             else
             {
