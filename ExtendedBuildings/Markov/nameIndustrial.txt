@@ -18,46 +18,6 @@ Ore Lmao Mines
 Rocktopus Mill
 Taken for Granite Mines
 Nice Boulder League
-Jaime's Trusty Animal Store
-Flannery's Fine Antique Shoppe
-The Fancy Book Shop
-Uncle Barry's Quality Bridal Wear Marketplace
-Topless Himalayan Wine Boutique
-Jett's Dope Clothing Department Store
-Pretty Brilliant Asian Center
-Leandro's Awesome Umbrella Enterprise
-Bobo's Seedy Mattress Warehouse
-Cheap and Baller Educational Skeleton Thrift Shop
-Chippy's Marvelous Video Games
-Pepper's Worthy Recycled Food Cafe
-Pico's Freaky Fish Stick Restaurant
-Flipper's Quaint Online Law Firm
-The Multinational Accounting Enterprise
-Lightning Fast Efficient Rope Company
-Fickle Heart Marvelous Simulation Games
-Remarkably Pleasant Travel Alliance
-Atilla's Competent Adventure Corporation
-Sid's Digital Mobile Conglomerate
-Peacock and Co. Licensed Telecommunications Business
-Lincoln's Skilled Cooking Solutions
-Frankie's Professional Mind Control Services
-Cheap and Frenzied Security League
-Ace's Slick Board Organisation
-Crackerjack's Tactful Paperwork Limited
-Owl and Cheese Attorneys at Law
-Spanky and The Fang Professional Services
-Lightning and Diamond Security Solutions
-Cotton and Queen Limited
-Donkey and Goldfish Accounting
-Bobo and Son Law Solutions
-Leather and Ghost Architects
-Tarzan and Bingle Solutions
-Candle and Fandango Company
-Neckbeard and Chippy Professional Services
-Smokey and Dad Coal Mines
-Little Jimmy and The Masked Man 
-Spider and Brown and Brown
-Tiny Brown and Tinkletown Food Cafe
 Plainview's Dynamic Pumpjack Inc.
 Midnight Black Gold Ashphalt Industries
 Jimmy's Oils and Processing Corporation 
@@ -71,31 +31,6 @@ Prospector Capable Propellant Organisation
 Greasy Productive Gas Congolomorate
 Slick Rick's Systematic Combustion League
 Rio Clinko Competent Drilling Alliance
-Cahalane Communications
-Van Prooijen Trading
-Hogan Wallace & White Insurance
-Hurt Enterprise Headquarters
-Pedriana Pharmaceuticals
-Lind Entertainement
-Andrews Fashion Center
-Bilyk Galleria
-Boutiques
-Car Care Center
-Carlin Department Store
-Chez Eyler
-Chicago Boutiques
-Euro Lux Boutique
-Grand Hotel
-Holistic Health Center
-Houston Boutiques
-JEK Equestrian Marketplace
-Kenner Dinner Theatre
-Luxury Auto Center
-Maxis Theatre
-New York Boutiques
-Peck Cinema
-St. Ritzy
-Stratton Spa	
 B. Powers Cloth
 Crunching Facility
 Kiwi Flooring Co.
@@ -107,3 +42,15 @@ Willmott Widget Assembly
 Zaidi Sprockets
 Zambel Assembly Line
 Zeno's Truck Parts
+Ominous Textiles
+Starburst Robot Manufacturing
+Poly John
+Sioux Chief Manufacturing
+BJF Electrics
+Kalico National Laboratory
+Heavymill paper
+General Oil Technologies
+Danny's Manufacturing Corporation
+5M Green Manufacturing
+Carr Car Company
+Doucat Industries
