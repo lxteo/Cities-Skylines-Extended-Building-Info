@@ -1,109 +1,59 @@
-﻿Ceritfied Earth Movers Inc.
-Barkley's Gold Digger Industries
-Ballarat Bedrock Mines Corproration 
-The Boulder Quarry Syndicate
-Family Gravel Business Enterprise
-Doug's Titanium Miner Union
-Grandma's Aluminium Deposit Association
-Eureka Silver Reserves Multinational
-Klondike's Copper Trade Company
-Plinkett's Chromium Collector Organisation
-Walter's Platinum Merchant Congolomorate
-Californian Uranium Holdings League
-Crystal's Iron Fist Alliance
-Heavy Metal Industries
-Blue Steel Mill
-Rock and Coal Mines
-Ore Lmao Mines
-Rocktopus Mill
-Taken for Granite Mines
-Nice Boulder League
-Jaime's Trusty Animal Store
-Flannery's Fine Antique Shoppe
-The Fancy Book Shop
-Uncle Barry's Quality Bridal Wear Marketplace
-Topless Himalayan Wine Boutique
-Jett's Dope Clothing Department Store
-Pretty Brilliant Asian Center
-Leandro's Awesome Umbrella Enterprise
-Bobo's Seedy Mattress Warehouse
-Cheap and Baller Educational Skeleton Thrift Shop
-Chippy's Marvelous Video Games
-Pepper's Worthy Recycled Food Cafe
-Pico's Freaky Fish Stick Restaurant
-Flipper's Quaint Online Law Firm
-The Multinational Accounting Enterprise
-Lightning Fast Efficient Rope Company
-Fickle Heart Marvelous Simulation Games
-Remarkably Pleasant Travel Alliance
-Atilla's Competent Adventure Corporation
-Sid's Digital Mobile Conglomerate
-Peacock and Co. Licensed Telecommunications Business
-Lincoln's Skilled Cooking Solutions
-Frankie's Professional Mind Control Services
-Cheap and Frenzied Security League
-Ace's Slick Board Organisation
-Crackerjack's Tactful Paperwork Limited
-Owl and Cheese Attorneys at Law
-Spanky and The Fang Professional Services
-Lightning and Diamond Security Solutions
-Cotton and Queen Limited
-Donkey and Goldfish Accounting
-Bobo and Son Law Solutions
-Leather and Ghost Architects
-Tarzan and Bingle Solutions
-Candle and Fandango Company
-Neckbeard and Chippy Professional Services
-Smokey and Dad Coal Mines
-Little Jimmy and The Masked Man 
-Spider and Brown and Brown
-Tiny Brown and Tinkletown Food Cafe
-Plainview's Dynamic Pumpjack Inc.
-Midnight Black Gold Ashphalt Industries
-Jimmy's Oils and Processing Corporation 
-Sustainable Efficient Fuel Syndicate
-The Friendly Gasoline Enterprise
-Cranker's Helpful Kerosene Refinery
-Tabitha's Classy Lubricants Association
-Ominous Refined Tar Multinational
-Starburst Precise Petrol Company
-Prospector Capable Propellant Organisation
-Greasy Productive Gas Congolomorate
-Slick Rick's Systematic Combustion League
-Rio Clinko Competent Drilling Alliance
-Cahalane Communications
-Van Prooijen Trading
-Hogan Wallace & White Insurance
-Hurt Enterprise Headquarters
-Pedriana Pharmaceuticals
-Lind Entertainement
-Andrews Fashion Center
-Bilyk Galleria
-Boutiques
-Car Care Center
-Carlin Department Store
-Chez Eyler
-Chicago Boutiques
-Euro Lux Boutique
-Grand Hotel
-Holistic Health Center
-Houston Boutiques
-JEK Equestrian Marketplace
-Kenner Dinner Theatre
-Luxury Auto Center
-Maxis Theatre
-New York Boutiques
-Peck Cinema
-St. Ritzy
-Stratton Spa	
-B. Powers Cloth
-Crunching Facility
-Kiwi Flooring Co.
-Packaging Facility
-Running Blade Manufacturing
-Storage Unit
-Vilett Textiles
-Willmott Widget Assembly
-Zaidi Sprockets
-Zambel Assembly Line
-Zeno's Truck Parts
+﻿Rookery Building
+Boleyn Tower 
+Bennett Houses
+Patterson Houses
+One Hagley Road
+Celestia Tower
+La Guardia Apartments
+Liberte
+Tung Chung Crescent
+Fraiser Suites
+Belvedere Luxury Apartments
+Kollmann Apartments
+Burbank Apartments
+The Mansands
+The Oasis
+Seagren Fine Homes
+Tagus Residences
+Double Bay Residences
+Blue Harbour Senior Living
+Seaholm Residences
+Largos Residences
+Boathous Residences
+Centrepoint Homes
+Brick Walls
+Pearls Hills
+Madison Residences
+H20 Residences
+Inspirit Homes
+Langley Apartments
+Camacuria Apartments and Residence
+Chandler Park Apartment Homes
+Gateway Apartments
+Tijuana Flats
+Oporto city Flats
+The Pinnacle
+River Edge
+Aquarius by The Park
+Hedges Park Condo
+Simsville
+Waterbank @ Dakota
+Palm Gardens
+Four Baker Street
+Savannah Condopark
+Reflections @ The Bay
+Flats at Three Seven Four
+Apartments @ Rivers
+Hospital Hill Apartments
+1330 7th Street
+9830 1th Street
+Two Bakely Road
+Central Gardens II
+Essex House
+Ashiana Housing
+Presidency Flora
+The Flats at Fisher
+Archana Projects
+Icon Condominum
+Howe Shoe Factory Condominium
+Kata Ocean View Condominium

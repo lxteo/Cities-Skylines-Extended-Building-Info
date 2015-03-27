@@ -1,36 +1,5 @@
-﻿Ceritfied Earth Movers Inc.
-Barkley's Gold Digger Industries
-Ballarat Bedrock Mines Corproration 
-The Boulder Quarry Syndicate
-Family Gravel Business Enterprise
-Doug's Titanium Miner Union
-Grandma's Aluminium Deposit Association
-Eureka Silver Reserves Multinational
-Klondike's Copper Trade Company
-Plinkett's Chromium Collector Organisation
-Walter's Platinum Merchant Congolomorate
-Californian Uranium Holdings League
-Crystal's Iron Fist Alliance
-Heavy Metal Industries
-Blue Steel Mill
-Rock and Coal Mines
-Ore Lmao Mines
-Rocktopus Mill
-Taken for Granite Mines
-Nice Boulder League
-Jaime's Trusty Animal Store
-Flannery's Fine Antique Shoppe
-The Fancy Book Shop
-Uncle Barry's Quality Bridal Wear Marketplace
-Topless Himalayan Wine Boutique
-Jett's Dope Clothing Department Store
-Pretty Brilliant Asian Center
-Leandro's Awesome Umbrella Enterprise
-Bobo's Seedy Mattress Warehouse
-Cheap and Baller Educational Skeleton Thrift Shop
-Chippy's Marvelous Video Games
-Pepper's Worthy Recycled Food Cafe
-Pico's Freaky Fish Stick Restaurant
+﻿Ceritfied Inc.
+Ballarat Bedrock Corproration 
 Flipper's Quaint Online Law Firm
 The Multinational Accounting Enterprise
 Lightning Fast Efficient Rope Company
@@ -77,33 +46,4 @@ Hogan Wallace & White Insurance
 Hurt Enterprise Headquarters
 Pedriana Pharmaceuticals
 Lind Entertainement
-Andrews Fashion Center
-Bilyk Galleria
-Boutiques
-Car Care Center
-Carlin Department Store
-Chez Eyler
-Chicago Boutiques
-Euro Lux Boutique
-Grand Hotel
-Holistic Health Center
-Houston Boutiques
-JEK Equestrian Marketplace
-Kenner Dinner Theatre
-Luxury Auto Center
-Maxis Theatre
-New York Boutiques
-Peck Cinema
-St. Ritzy
-Stratton Spa	
-B. Powers Cloth
-Crunching Facility
-Kiwi Flooring Co.
-Packaging Facility
-Running Blade Manufacturing
-Storage Unit
-Vilett Textiles
-Willmott Widget Assembly
-Zaidi Sprockets
-Zambel Assembly Line
-Zeno's Truck Parts
+Faceblock

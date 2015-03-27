@@ -202,6 +202,11 @@ namespace ExtendedBuildings
                         break;
                     }
                 }
+
+                if (!isWord)
+                {
+                    result.Add(" ");
+                }
             }
 
             if (isWord)
