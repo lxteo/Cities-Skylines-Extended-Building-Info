@@ -70,11 +70,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Markov\descriptionsFarm.txt" />
+    <Content Include="Markov\descriptionsMine.txt" />
+    <Content Include="Markov\descriptionsForest.txt" />
+    <Content Include="Markov\descriptionsCommercial.txt" />
     <Content Include="Markov\descriptionsResidential.txt" />
     <Content Include="Markov\descriptionsOffices.txt" />
     <Content Include="Markov\descriptionsIndustrial.txt" />
-    <Content Include="Markov\descriptionsCommercial.txt" />
+    <Content Include="Markov\descriptionsOil.txt" />
     <Content Include="Markov\nameCommercial.txt" />
+    <Content Include="Markov\nameFarm.txt" />
+    <Content Include="Markov\nameForest.txt" />
+    <Content Include="Markov\nameMine.txt" />
+    <Content Include="Markov\nameOil.txt" />
     <Content Include="Markov\nameIndustrial.txt" />
     <Content Include="Markov\nameResidential.txt" />
     <Content Include="Markov\nameOffices .txt" />

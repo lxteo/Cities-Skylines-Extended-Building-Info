@@ -13,7 +13,7 @@ namespace ExtendedBuildings
     using System.Reflection;
     using System.Timers;
     using UnityEngine;
-    public class BuildingInfoWindow8 : UIPanel
+    public class BuildingInfoWindow9 : UIPanel
     {
         const float vertPadding = 26;
         float barWidth;
@@ -388,6 +388,8 @@ namespace ExtendedBuildings
                 if (buildingName == null)
                 {
                     this.buildingName = this.baseBuildingWindow.Find<UITextField>("BuildingName");
+                    this.buildingName.maxLength = 50;
+                    this.buildingName.textScale = 0.87f;
                 }
                 if (buildingName != null)
                 {
@@ -404,7 +406,7 @@ namespace ExtendedBuildings
                         descriptionLabel.text = desc;
                         descriptionLabel.Show();
                         descriptionLabel.relativePosition = new Vector3(x, y);                        
-                        y += descriptionLabel.height + 10;                        
+                        y += descriptionLabel.height + 10;
                     }
                     else
                     {
@@ -421,7 +423,7 @@ namespace ExtendedBuildings
 
             Randomizer randomizer = new Randomizer(Singleton<SimulationManager>.instance.m_metaData.m_gameInstanceIdentifier.GetHashCode() - buildingId);
             var year = 2015 - buildingId % 200;
-            var text = this.buildingDescriptions[zone].GetText(ref randomizer, 110, 220, true);
+            var text = this.buildingDescriptions[zone].GetText(ref randomizer, 100, 200, true);
             var cityName = Singleton<SimulationManager>.instance.m_metaData.m_CityName.Trim();
             text = text.Replace("COMPANY", bName).Replace("DATE", year.ToString()).Replace("SITY",cityName);
             return text;
@@ -432,7 +434,7 @@ namespace ExtendedBuildings
             Randomizer randomizer = new Randomizer(Singleton<SimulationManager>.instance.m_metaData.m_gameInstanceIdentifier.GetHashCode() - buildingId);
             if (buildingId % 6 != 0)
             {
-                return this.buildingNames[zone].GetText(ref randomizer, 7, 26, true,true);                
+                return this.buildingNames[zone].GetText(ref randomizer, 6, 25, true,true);                
             }
             else
             {
