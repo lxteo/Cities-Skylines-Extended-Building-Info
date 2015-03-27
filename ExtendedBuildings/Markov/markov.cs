@@ -130,7 +130,7 @@ namespace ExtendedBuildings
             return GetText(ref rand, min, max, useStarter);
         }
 
-        public string GetText(ref Randomizer rand, int min, int max, bool useStarter)
+        public string GetText(ref Randomizer rand, int min, int max, bool useStarter,bool endOnSpaces = false)
         {
             var what = rand.Int32(42u);
             var result = new List<string>();
@@ -197,10 +197,19 @@ namespace ExtendedBuildings
                     }
                     current = pairs[nc];
                     var lastWord = result[result.Count - 1];
-                    if (result.Count > ((max - min) / 2 + min) && lastWord.Substring(lastWord.Length - 1) == " " && rand.Int32((uint)(max * 1.5 - result.Count)) == 3)
+                    var lastChar = lastWord.Substring(lastWord.Length - 1);
+                    if (result.Count > ((max - min) / 2 + min))
                     {
-                        break;
+                        var randValue = rand.Int32((uint)(Math.Max(0,max * 2 - result.Count)));
+                        if (endOnSpaces && (lastChar == " " && randValue < 2))
+                        {
+                            break;
+                        }
+                        if ((lastChar == "."|| lastChar == "!") && randValue < 8){
+                            break;
+                        }
                     }
+                    
                 }
 
                 if (!isWord)

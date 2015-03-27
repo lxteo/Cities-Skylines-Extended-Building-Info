@@ -13,7 +13,7 @@ namespace ExtendedBuildings
     using System.Reflection;
     using System.Timers;
     using UnityEngine;
-    public class BuildingInfoWindow3 : UIPanel
+    public class BuildingInfoWindow8 : UIPanel
     {
         const float vertPadding = 26;
         float barWidth;
@@ -421,7 +421,7 @@ namespace ExtendedBuildings
 
             Randomizer randomizer = new Randomizer(Singleton<SimulationManager>.instance.m_metaData.m_gameInstanceIdentifier.GetHashCode() - buildingId);
             var year = 2015 - buildingId % 200;
-            var text = this.buildingDescriptions[zone].GetText(ref randomizer, 120, 240, true);
+            var text = this.buildingDescriptions[zone].GetText(ref randomizer, 110, 220, true);
             var cityName = Singleton<SimulationManager>.instance.m_metaData.m_CityName.Trim();
             text = text.Replace("COMPANY", bName).Replace("DATE", year.ToString()).Replace("SITY",cityName);
             return text;
@@ -430,9 +430,9 @@ namespace ExtendedBuildings
         private string GetName(ushort buildingId,ItemClass.Zone zone)
         {
             Randomizer randomizer = new Randomizer(Singleton<SimulationManager>.instance.m_metaData.m_gameInstanceIdentifier.GetHashCode() - buildingId);
-            if (buildingId % 5 != 0)
+            if (buildingId % 6 != 0)
             {
-                return this.buildingNames[zone].GetText(ref randomizer, 7, 70, true);                
+                return this.buildingNames[zone].GetText(ref randomizer, 7, 26, true,true);                
             }
             else
             {
