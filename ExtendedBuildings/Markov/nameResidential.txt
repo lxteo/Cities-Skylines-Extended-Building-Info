@@ -1,4 +1,4 @@
-﻿Rookery Building
+Rookery Building
 Boleyn Tower 
 Bennett Houses
 Patterson Houses
@@ -83,3 +83,13 @@ Simple Complex
 Private Public Housing
 Hung & Draun Quaters
 Atomic Units
+The Belvedere
+The James
+The Mary
+The Fields
+The Changing World
+Charmed Residences
+Fountain Spray
+Foley Residences
+Avalon Condominiums
+Cardinal Apartments
