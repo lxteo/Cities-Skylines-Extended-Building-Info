@@ -173,13 +173,13 @@ namespace ExtendedBuildings
 
             int alive = 0;
             int total = 0;
-            int homeCount = 0;
-            int aliveHomeCount = 0;
-            int emptyHome = 0;
+            int COMPANYCount = 0;
+            int aliveCOMPANYCount = 0;
+            int emptyCOMPANY = 0;
 
             if (zone == ItemClass.Zone.ResidentialLow || zone == ItemClass.Zone.ResidentialHigh)
             {
-                CitizenHelper.instance.GetHomeBehaviour(buildingID, data, ref behaviour, ref alive, ref total, ref homeCount, ref aliveHomeCount, ref emptyHome);
+                CitizenHelper.instance.GetHomeBehaviour(buildingID, data, ref behaviour, ref alive, ref total, ref COMPANYCount, ref aliveCOMPANYCount, ref emptyCOMPANY);
                 if (alive > 0)
                 {
                     int num = behaviour.m_educated1Count + behaviour.m_educated2Count * 2 + behaviour.m_educated3Count * 3;

@@ -13,7 +13,8 @@ namespace ExtendedBuildings
     using System.Reflection;
     using System.Timers;
     using UnityEngine;
-    public class BuildingInfoWindow9 : UIPanel
+
+    public class BuildingInfoWindow10 : UIPanel
     {
         const float vertPadding = 26;
         float barWidth;
@@ -38,8 +39,8 @@ namespace ExtendedBuildings
         public ZonedBuildingWorldInfoPanel baseBuildingWindow;
         FieldInfo baseSub;
 
-        Dictionary<ItemClass.Zone, Markov> buildingNames= new Dictionary<ItemClass.Zone,Markov>();
-        Dictionary<ItemClass.Zone, Markov> buildingDescriptions= new Dictionary<ItemClass.Zone,Markov>();
+        Dictionary<string, Markov> buildingNames = new Dictionary<string, Markov>();
+        Dictionary<string, Markov> buildingDescriptions = new Dictionary<string, Markov>();
 
         UIButton descriptionButton;
         UILabel descriptionLabel;
@@ -87,27 +88,38 @@ namespace ExtendedBuildings
 
             buildingNames.Clear();
             var commercialName = new Markov(Properties.Resources.nameCommercial, false, 4);
-            buildingNames.Add(ItemClass.Zone.CommercialHigh, commercialName);
-            buildingNames.Add(ItemClass.Zone.CommercialLow,commercialName);
+            buildingNames.Add(ItemClass.Zone.CommercialHigh.ToString(), commercialName);
+            buildingNames.Add(ItemClass.Zone.CommercialLow.ToString(), commercialName);
             var resName = new Markov(Properties.Resources.nameResidential, false, 4);
-            buildingNames.Add(ItemClass.Zone.ResidentialHigh, resName);
-            buildingNames.Add(ItemClass.Zone.ResidentialLow, resName);
+            buildingNames.Add(ItemClass.Zone.ResidentialHigh.ToString(), resName);
+            buildingNames.Add(ItemClass.Zone.ResidentialLow.ToString(), resName);
             var indyName = new Markov(Properties.Resources.nameIndustrial, false, 4);
-            buildingNames.Add(ItemClass.Zone.Industrial, indyName);
+            buildingNames.Add(ItemClass.Zone.Industrial.ToString(), indyName);
             var officeName = new Markov(Properties.Resources.nameOffices, false, 4);
-            buildingNames.Add(ItemClass.Zone.Office, officeName);
+            buildingNames.Add(ItemClass.Zone.Office.ToString(), officeName);
+
+            buildingNames.Add(ItemClass.SubService.IndustrialFarming.ToString(), new Markov(Properties.Resources.nameFarm, false, 4));
+            buildingNames.Add(ItemClass.SubService.IndustrialForestry.ToString(), new Markov(Properties.Resources.nameForest, false, 4));
+            buildingNames.Add(ItemClass.SubService.IndustrialOre.ToString(), new Markov(Properties.Resources.nameMine, false, 4));
+            buildingNames.Add(ItemClass.SubService.IndustrialOil.ToString(), new Markov(Properties.Resources.nameOil, false, 4));
 
             buildingDescriptions.Clear();
-            var commercialDescription = new Markov(Properties.Resources.descriptionsCommercial, false, 7);
-            buildingDescriptions.Add(ItemClass.Zone.CommercialHigh, commercialDescription);
-            buildingDescriptions.Add(ItemClass.Zone.CommercialLow, commercialDescription);
-            var resDescription = new Markov(Properties.Resources.descriptionsResidential, false, 7);
-            buildingDescriptions.Add(ItemClass.Zone.ResidentialHigh, resDescription);
-            buildingDescriptions.Add(ItemClass.Zone.ResidentialLow, resDescription);
-            var indyDescription = new Markov(Properties.Resources.descriptionsIndustrial, false, 7);
-            buildingDescriptions.Add(ItemClass.Zone.Industrial, indyDescription);
-            var officeDescription = new Markov(Properties.Resources.descriptionsOffices, false, 7);
-            buildingDescriptions.Add(ItemClass.Zone.Office, officeDescription);
+            var commercialDescription = new Markov(Properties.Resources.descriptionsCommercial, false, 9);
+            buildingDescriptions.Add(ItemClass.Zone.CommercialHigh.ToString(), commercialDescription);
+            buildingDescriptions.Add(ItemClass.Zone.CommercialLow.ToString(), commercialDescription);
+            var resDescription = new Markov(Properties.Resources.descriptionsResidential, false, 9);
+            buildingDescriptions.Add(ItemClass.Zone.ResidentialHigh.ToString(), resDescription);
+            buildingDescriptions.Add(ItemClass.Zone.ResidentialLow.ToString(), resDescription);
+            var indyDescription = new Markov(Properties.Resources.descriptionsIndustrial, false, 9);
+            buildingDescriptions.Add(ItemClass.Zone.Industrial.ToString(), indyDescription);
+            var officeDescription = new Markov(Properties.Resources.descriptionsOffices, false, 9);
+            buildingDescriptions.Add(ItemClass.Zone.Office.ToString(), officeDescription);
+
+
+            buildingDescriptions.Add(ItemClass.SubService.IndustrialFarming.ToString(), new Markov(Properties.Resources.descriptionsFarm, false, 4));
+            buildingDescriptions.Add(ItemClass.SubService.IndustrialForestry.ToString(), new Markov(Properties.Resources.descriptionsForest, false, 4));
+            buildingDescriptions.Add(ItemClass.SubService.IndustrialOre.ToString(), new Markov(Properties.Resources.descriptionsMine, false, 4));
+            buildingDescriptions.Add(ItemClass.SubService.IndustrialOil.ToString(), new Markov(Properties.Resources.descriptionsOil, false, 4));
 
             descriptionLabel = AddUIComponent<UILabel>();
             descriptionButton = AddUIComponent<UIButton>();
@@ -252,7 +264,7 @@ namespace ExtendedBuildings
             {
                 ushort building = instanceId.Building;
                 if (this.baseBuildingWindow != null && this.enabled && isVisible && Singleton<BuildingManager>.exists && ((Singleton<SimulationManager>.instance.m_currentFrameIndex & 15u) == 15u || selectedBuilding != building))
-                    {
+                {
                     BuildingManager instance = Singleton<BuildingManager>.instance;
                     this.UpdateBuildingInfo(building, instance.m_buildings.m_buffer[(int)building]);
                     selectedBuilding = building;
@@ -380,7 +392,7 @@ namespace ExtendedBuildings
             SetPos(happyLabel, happyBar, x, y, true);
             y += vertPadding;
 
-            descriptionButton.relativePosition = new Vector3(this.width / 2 - 40, y-10);
+            descriptionButton.relativePosition = new Vector3(this.width / 2 - 40, y - 10);
             y += 12;
 
             if (this.baseBuildingWindow != null)
@@ -396,16 +408,16 @@ namespace ExtendedBuildings
                     var bName = this.buildingName.text;
                     if ((data.m_flags & Building.Flags.CustomName) == Building.Flags.None && !this.buildingName.hasFocus)
                     {
-                        bName = GetName(buildingId, zone);
+                        bName = GetName(buildingId, zone, data.Info.m_class.m_subService);
                         this.buildingName.text = bName;
                     }
 
                     if (showDescription)
                     {
-                        var desc = GetDescription(bName, buildingId, zone);
+                        var desc = GetDescription(bName, buildingId, zone, data.Info.m_class.m_subService);
                         descriptionLabel.text = desc;
                         descriptionLabel.Show();
-                        descriptionLabel.relativePosition = new Vector3(x, y);                        
+                        descriptionLabel.relativePosition = new Vector3(x, y);
                         y += descriptionLabel.height + 10;
                     }
                     else
@@ -418,29 +430,42 @@ namespace ExtendedBuildings
 
         }
 
-        private string GetDescription(string bName, ushort buildingId, ItemClass.Zone zone)
+        private string GetDescription(string bName, ushort buildingId, ItemClass.Zone zone, ItemClass.SubService ss)
         {
 
             Randomizer randomizer = new Randomizer(Singleton<SimulationManager>.instance.m_metaData.m_gameInstanceIdentifier.GetHashCode() - buildingId);
             var year = 2015 - buildingId % 200;
-            var text = this.buildingDescriptions[zone].GetText(ref randomizer, 100, 200, true);
-            var cityName = Singleton<SimulationManager>.instance.m_metaData.m_CityName.Trim();
-            text = text.Replace("COMPANY", bName).Replace("DATE", year.ToString()).Replace("SITY",cityName);
-            return text;
+            Markov markov = null;
+            if (!this.buildingDescriptions.TryGetValue(ss.ToString(), out markov))
+            {
+                this.buildingDescriptions.TryGetValue(zone.ToString(), out markov);
+            }
+            if (markov != null)
+            {
+                var text = markov.GetText(ref randomizer, 100, 200, true);
+                var cityName = Singleton<SimulationManager>.instance.m_metaData.m_CityName.Trim();
+                text = text.Replace("COMPANY", bName).Replace("DATE", year.ToString()).Replace("SITY", cityName);
+                return text;
+            }
+            return "";
         }
 
-        private string GetName(ushort buildingId,ItemClass.Zone zone)
+        private string GetName(ushort buildingId, ItemClass.Zone zone, ItemClass.SubService ss)
         {
             Randomizer randomizer = new Randomizer(Singleton<SimulationManager>.instance.m_metaData.m_gameInstanceIdentifier.GetHashCode() - buildingId);
             if (buildingId % 6 != 0)
             {
-                return this.buildingNames[zone].GetText(ref randomizer, 6, 25, true,true);                
+                Markov markov = null;
+                if (!this.buildingNames.TryGetValue(ss.ToString(), out markov))
+                {
+                    this.buildingNames.TryGetValue(zone.ToString(), out markov);
+                }
+                if (markov != null)
+                {
+                    return markov.GetText(ref randomizer, 6, 20, true, true);
+                }
             }
-            else
-            {
-                return this.buildingName.text;
-            }
-            
+            return this.buildingName.text;
         }
 
         private void SetProgress(UIProgressBar serviceBar, float val, float start, float target)

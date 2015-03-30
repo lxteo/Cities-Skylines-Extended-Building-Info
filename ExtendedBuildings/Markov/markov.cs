@@ -22,9 +22,13 @@ namespace ExtendedBuildings
             pairs = new Dictionary<string, Ngram>();
             starters = new Dictionary<string, int>();
 
-            var buffer = resource.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+            var buffer = resource.Split(new string[] { Environment.NewLine,"\n" }, StringSplitOptions.None);
             foreach (var line in buffer)
             {
+                if (line == null || line.Trim().Length <= n)
+                {
+                    continue;
+                }
                 if (useWords)
                 {
                     GenerateByWord(line.Trim(), n);
@@ -132,7 +136,7 @@ namespace ExtendedBuildings
 
         public string GetText(ref Randomizer rand, int min, int max, bool useStarter,bool endOnSpaces = false)
         {
-            var what = rand.Int32(42u);
+            var what = rand.Int32(41u);
             var result = new List<string>();
             
             while (result.Count() < min)
@@ -201,7 +205,7 @@ namespace ExtendedBuildings
                     if (result.Count > ((max - min) / 2 + min))
                     {
                         var randValue = rand.Int32((uint)(Math.Max(0,max * 2 - result.Count)));
-                        if (endOnSpaces && (lastChar == " " && randValue < 2))
+                        if (endOnSpaces && (lastChar == " " && randValue < 3))
                         {
                             break;
                         }

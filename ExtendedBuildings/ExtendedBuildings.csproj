@@ -82,10 +82,10 @@
     <Content Include="Markov\nameFarm.txt" />
     <Content Include="Markov\nameForest.txt" />
     <Content Include="Markov\nameMine.txt" />
+    <Content Include="Markov\nameOffices.txt" />
     <Content Include="Markov\nameOil.txt" />
     <Content Include="Markov\nameIndustrial.txt" />
     <Content Include="Markov\nameResidential.txt" />
-    <Content Include="Markov\nameOffices .txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

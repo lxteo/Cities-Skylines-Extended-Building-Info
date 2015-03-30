@@ -11,7 +11,7 @@ namespace ExtendedBuildings
     public class ExtendedLoading : LoadingExtensionBase
     {
         static GameObject buildingWindowGameObject;
-        BuildingInfoWindow9 buildingWindow;
+        BuildingInfoWindow10 buildingWindow;
         private LoadMode _mode;
 
         public override void OnLevelLoaded(LoadMode mode)
@@ -23,7 +23,7 @@ namespace ExtendedBuildings
             buildingWindowGameObject = new GameObject("buildingWindowObject");
 
             var buildingInfo = UIView.Find<UIPanel>("(Library) ZonedBuildingWorldInfoPanel");
-            this.buildingWindow = buildingWindowGameObject.AddComponent<BuildingInfoWindow9>();
+            this.buildingWindow = buildingWindowGameObject.AddComponent<BuildingInfoWindow10>();
             this.buildingWindow.transform.parent = buildingInfo.transform;
             this.buildingWindow.size = new Vector3(buildingInfo.size.x, buildingInfo.size.y);
             this.buildingWindow.baseBuildingWindow = buildingInfo.gameObject.transform.GetComponentInChildren<ZonedBuildingWorldInfoPanel>();

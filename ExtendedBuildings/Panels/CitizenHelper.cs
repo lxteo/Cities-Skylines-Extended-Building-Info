@@ -175,7 +175,7 @@ namespace ExtendedBuildings
         }
 
 
-        public void GetHomeBehaviour(ushort buildingID, Building buildingData, ref Citizen.BehaviourData behaviour, ref int aliveCount, ref int totalCount, ref int homeCount, ref int aliveHomeCount, ref int emptyHomeCount)
+        public void GetHomeBehaviour(ushort buildingID, Building buildingData, ref Citizen.BehaviourData behaviour, ref int aliveCount, ref int totalCount, ref int COMPANYCount, ref int aliveCOMPANYCount, ref int emptyCOMPANYCount)
         {
             CitizenManager instance = Singleton<CitizenManager>.instance;
             uint num = buildingData.m_citizenUnits;
@@ -189,7 +189,7 @@ namespace ExtendedBuildings
                     instance.m_units.m_buffer[(int)((UIntPtr)num)].GetCitizenHomeBehaviour(ref behaviour, ref num3, ref num4);
                     if (num3 != 0)
                     {
-                        aliveHomeCount++;
+                        aliveCOMPANYCount++;
                         aliveCount += num3;
                     }
                     if (num4 != 0)
@@ -198,9 +198,9 @@ namespace ExtendedBuildings
                     }
                     else
                     {
-                        emptyHomeCount++;
+                        emptyCOMPANYCount++;
                     }
-                    homeCount++;
+                    COMPANYCount++;
                 }
                 num = instance.m_units.m_buffer[(int)((UIntPtr)num)].m_nextUnit;
                 if (++num2 > 524288)

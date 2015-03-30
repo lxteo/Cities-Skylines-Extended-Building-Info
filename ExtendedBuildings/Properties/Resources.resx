@@ -121,11 +121,23 @@
   <data name="descriptionsCommercial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Markov\descriptionsCommercial.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="descriptionsFarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\markov\descriptionsfarm.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="descriptionsForest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\markov\descriptionsforest.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="descriptionsIndustrial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Markov\descriptionsIndustrial.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="descriptionsMine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\markov\descriptionsmine.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="descriptionsOffices" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Markov\descriptionsOffices.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="descriptionsOil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\markov\descriptionsoil.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="descriptionsResidential" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Markov\descriptionsResidential.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
@@ -133,11 +145,23 @@
   <data name="nameCommercial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Markov\nameCommercial.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="nameFarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\markov\namefarm.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="nameForest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\markov\nameforest.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="nameIndustrial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Markov\nameIndustrial.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="nameMine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\markov\namemine.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="nameOffices" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Markov\nameOffices .txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>..\markov\nameoffices.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="nameOil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\markov\nameoil.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="nameResidential" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Markov\nameResidential.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
