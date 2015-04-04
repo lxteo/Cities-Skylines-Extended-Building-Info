@@ -1,6 +1,6 @@
 {
 	"Language": "pt",
-	"Building Info": {
+	"BuildingInfoWindow": {
 		"Awake": {
 			"Pollution": "Poluição"
 			"Resources": {
@@ -65,7 +65,7 @@
 			"Max!": "O Máx!"
 		}
 	},
-	"Service Info": {
+	"ServiceInfoWindow": {
 		"FireStationAI": {
 			"Fire Fighting": "Combate a Incêndios", 
 			"Radius": "Raio", 
