@@ -96,6 +96,7 @@
   <ItemGroup>
     <Folder Include="Markov\de\" />
     <Folder Include="Markov\ko\" />
+    <Folder Include="panels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
