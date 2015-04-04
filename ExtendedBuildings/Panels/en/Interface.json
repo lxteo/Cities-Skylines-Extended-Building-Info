@@ -1,0 +1,85 @@
+{
+	"__comment": "if in doubt, see http://wiki.unity3d.com/index.php/SimpleJSON",
+	"Language": "en",
+	"Building Info": {
+		"Awake": {
+			"Pollution": "Pollution"
+		},
+		"GetName": {
+			"FireDepartment": "Fire",
+			"PoliceDepartment": "Police",
+			"PublicTransport": "Trasp.",
+			"Abandoment": "Abandonment",
+			"Entertainment": "Parks",
+			"NoisePollution": "Noise",
+			"CargoTransport": "Cargo",
+			"EducationElementary": "Elem.",
+			"EducationHighSchool": "High Sch.",
+			"EducationUniversity": "Uni.",
+			"HealthCare": "Health",
+			"DeathCare": "Death"
+		},
+		"SetupControls": {
+			"service": {
+				"Label": "Service Progress", 
+				"tooltip": "Progress until next level, combined score of factors shown above."
+			},
+			"education": {
+				"Label": "Education Progress",
+				"tooltip": "Progress until next level."
+			},
+			"happy": {
+				"Label": "Happiness",
+				"tooltip": "Average happiness."
+			},
+		},
+		"UpdateBuildingInfo": {
+			"Land Value Progress": "Land Value Progress",
+			"Service Progress": "Service Progress",
+			"Wealth Progress": "Wealth Progress",
+			"Education Progress": "Education Progress"
+		},
+		"SetProgress": {
+			"Max!": "Max!"
+		}
+	},
+	"Service Info": {
+		"FireStationAI": {
+			"Fire Fighting": "Fire Fighting", 
+			"Radius": "Radius", 
+			"Kittens Saved": "Kittens Saved"
+		},
+		"MonumentAI": {
+			"Entertainment": "Entertainment",
+			"Radius": "Radius",
+			"Attractiveness": "Attractiveness"
+		},
+		"HospitalAI": {
+			"Healthcare": "Healthcare",
+			"Radius": "Radius"
+		},
+		"CemeteryAI": {
+			"Deathcare": "Healthcare",
+			"Radius": "Radius",
+			"Bodies Misplaced": "Bodies Misplaced"
+		},
+		"ParkAI": {
+			"Entertainment": "Entertainment",
+			"Radius": "Radius",
+			"Llamas Sighted": "Llamas Sighted"
+		},
+		"SchoolAI": {
+			"Education": "Education",
+			"Radius": "Radius",
+			"Classes Skipped": "Classes Skipped"
+		},
+		"PoliceStationAI": {
+			"Police": "Police",
+			"Radius": "Radius"
+		},
+		"CargoStationAI": {
+			"Cargo": "Cargo",
+			"Radius": "Radius"
+		}
+	}
+}
