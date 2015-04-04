@@ -2,7 +2,30 @@
 	"Language": "en",
 	"Building Info": {
 		"Awake": {
-			"Pollution": "Pollution"
+			"Pollution": "Pollution",
+			"Resources": {
+				0: "Healthcare",
+				1: "Fire Department",
+				2: "Police Department",
+				3: "Elementary",
+				4: "High School",
+				5: "University",
+				6: "Death Care",
+				7: "Public Transport",
+				8: "Noise Pollution",
+				9: "Crime Rate",
+				10: "Health",
+				11: "Wellbeing",
+				12: "Density",
+				13: "Entertainment",
+				14: "Land Value",
+				15: "Attractiveness",
+				16: "Coverage",
+				17: "Fire Hazard",
+				18: "Abandonment",
+				19: "Cargo Transport",
+				255: "None"
+			}
 		},
 		"GetName": {
 			"FireDepartment": "Fire",

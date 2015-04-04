@@ -3,6 +3,29 @@
 	"Building Info": {
 		"Awake": {
 			"Pollution": "Poluição"
+			"Resources": {
+				0: "Assistência Médica",
+				1: "Corpo De Bombeiros",
+				2: "Departamento De Polícia",
+				3: "Educação Primária",
+				4: "Ensino Médio",
+				5: "Universidade",
+				6: "Serviço Necrotério",
+				7: "Transporte Público",
+				8: "Poluição Sonora",
+				9: "Taxa De Crime",
+				10: "Saúde",
+				11: "Bem-estar",
+				12: "Densidade",
+				13: "Diversão",
+				14: "Valor da Terra",
+				15: "Atração",
+				16: "Cobertura",
+				17: "Risco de Incêndio",
+				18: "Abandono",
+				19: "Transporte de Cargas",
+				255: "Nenhum"
+			}
 		},
 		"GetName": {
 			"FireDepartment": "Bomb.",
@@ -13,7 +36,7 @@
 			"NoisePollution": "Ruído",
 			"CargoTransport": "Carga",
 			"EducationElementary": "Edu. 1ª",
-			"EducationHighSchool": "Colégio",
+			"EducationHighSchool": "Edu. 2ª",
 			"EducationUniversity": "Univ.",
 			"HealthCare": "Saúde",
 			"DeathCare": "Necro."
