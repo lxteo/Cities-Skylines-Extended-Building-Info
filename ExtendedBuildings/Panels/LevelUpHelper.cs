@@ -121,27 +121,32 @@ namespace ExtendedBuildings
             return ImmaterialResourceManager.CalculateResourceEffect((int)resourceRate13, 50, 255, 50, 100);
         }
 
-        public double GetServiceScore(int resourceRate, ImmaterialResourceManager.Resource resource, ItemClass.Zone zone)
+        public double GetServiceScore(int resourceRate, ImmaterialResourceManager.Resource resource, ItemClass.Zone zone,ref int maxLimit)
         {
             if (zone == ItemClass.Zone.ResidentialHigh || zone == ItemClass.Zone.ResidentialLow || zone == ItemClass.Zone.CommercialHigh || zone == ItemClass.Zone.CommercialLow){
                 switch (resource)
                 {
                     case ImmaterialResourceManager.Resource.NoisePollution:
                     case ImmaterialResourceManager.Resource.CrimeRate:
+                        maxLimit = 100;
                         return ImmaterialResourceManager.CalculateResourceEffect(resourceRate, 10, 100, 0, 100);
                     
                     case ImmaterialResourceManager.Resource.FireHazard:
+                        maxLimit = 100;
                         return ImmaterialResourceManager.CalculateResourceEffect(resourceRate, 50,100,10,50);
                     case ImmaterialResourceManager.Resource.Abandonment:
+                        maxLimit = 50;
                         return ImmaterialResourceManager.CalculateResourceEffect(resourceRate, 15, 50, 100, 200);
                 }
             }
+            maxLimit = 500;
             return ImmaterialResourceManager.CalculateResourceEffect(resourceRate, 100, 500, 50, 100);
         }
 
-        public double GetServiceScore(ImmaterialResourceManager.Resource resource, ItemClass.Zone zone, ushort[] array, int num)
+        public double GetServiceScore(ImmaterialResourceManager.Resource resource, ItemClass.Zone zone, ushort[] array, int num,ref int rawValue, ref int maxLimit)
         {
-            return GetServiceScore(array[num + (int)resource], resource,zone);
+            rawValue = array[num + (int)resource];
+            return GetServiceScore(rawValue, resource, zone, ref maxLimit);
         }
 
         public int GetProperServiceScore(ushort buildingID)
@@ -154,8 +159,10 @@ namespace ExtendedBuildings
             var zone = data.Info.m_class.GetZone();
             for (var i = 0; i < 20; i += 1)
             {
+                int max = 0;
+                int raw = 0;
                 var imr = (ImmaterialResourceManager.Resource)i;
-                num2 += GetServiceScore(imr, zone, array, num) * GetFactor(zone, imr);
+                num2 += GetServiceScore(imr, zone, array, num,ref raw,  ref max) * GetFactor(zone, imr);
             }
 
             num2 -= GetPollutionScore(data, zone) * GetPollutionFactor(zone);
@@ -187,7 +194,7 @@ namespace ExtendedBuildings
                     if (num2 != 0)
                     {
                         education = (num * 72 + (num2 >> 1)) / num2;
-                        happy = 100 * behaviour.m_wellbeingAccumulation / (float)(alive * 255);
+                        happy =  behaviour.m_wellbeingAccumulation / (float)alive;
                         return;
                     }
                 }
@@ -199,7 +206,7 @@ namespace ExtendedBuildings
                 {
                     int num = num = behaviour.m_wealth1Count + behaviour.m_wealth2Count * 2 + behaviour.m_wealth3Count * 3;
                     education = (num * 18 + (alive >> 1)) / alive;
-                    happy = 100 * behaviour.m_wellbeingAccumulation / (float)(alive * 255);
+                    happy =  behaviour.m_wellbeingAccumulation / (float)alive;
                     commute = 0;
                     return;
                 }
@@ -211,7 +218,7 @@ namespace ExtendedBuildings
                 if (alive > 0)
                 {
                     education = (num * 12 + (alive >> 1)) / alive;
-                    happy = 100 * behaviour.m_wellbeingAccumulation / (float)(alive * 255);
+                    happy =  behaviour.m_wellbeingAccumulation / (float)alive;
                     return;
                 }
             }
@@ -222,7 +229,7 @@ namespace ExtendedBuildings
                 if (alive > 0)
                 {
                     education = num = (num * 20 + (alive >> 1)) / alive;
-                    happy = 100 * behaviour.m_wellbeingAccumulation / (float)(alive * 255);
+                    happy =  behaviour.m_wellbeingAccumulation / (float)alive;
                     return;
                 }
             }
@@ -231,7 +238,7 @@ namespace ExtendedBuildings
             happy = 0;
             commute = 0;
         }
-
+        
         public int GetServiceThreshhold(ItemClass.Level level, ItemClass.Zone zone)
         {
             switch (zone)

@@ -6,15 +6,17 @@ using System.Text;
 namespace ExtendedBuildings
 {
     using ColossalFramework;
+    using ColossalFramework.Globalization;
     using ColossalFramework.Math;
     using ColossalFramework.UI;
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Reflection;
     using System.Timers;
     using UnityEngine;
 
-    public class BuildingInfoWindow10 : UIPanel
+    public class BuildingInfoWindow4 : UIPanel
     {
         const float vertPadding = 26;
         float barWidth;
@@ -47,6 +49,7 @@ namespace ExtendedBuildings
 
         ushort selectedBuilding;
         bool showDescription = true;
+        bool showName = true;
 
         public override void Awake()
         {
@@ -87,45 +90,52 @@ namespace ExtendedBuildings
             happyBar = AddUIComponent<UIProgressBar>();
 
             buildingNames.Clear();
-            var commercialName = new Markov(Properties.Resources.nameCommercial, false, 4);
-            buildingNames.Add(ItemClass.Zone.CommercialHigh.ToString(), commercialName);
-            buildingNames.Add(ItemClass.Zone.CommercialLow.ToString(), commercialName);
-            var resName = new Markov(Properties.Resources.nameResidential, false, 4);
-            buildingNames.Add(ItemClass.Zone.ResidentialHigh.ToString(), resName);
-            buildingNames.Add(ItemClass.Zone.ResidentialLow.ToString(), resName);
-            var indyName = new Markov(Properties.Resources.nameIndustrial, false, 4);
-            buildingNames.Add(ItemClass.Zone.Industrial.ToString(), indyName);
-            var officeName = new Markov(Properties.Resources.nameOffices, false, 4);
-            buildingNames.Add(ItemClass.Zone.Office.ToString(), officeName);
-
-            buildingNames.Add(ItemClass.SubService.IndustrialFarming.ToString(), new Markov(Properties.Resources.nameFarm, false, 4));
-            buildingNames.Add(ItemClass.SubService.IndustrialForestry.ToString(), new Markov(Properties.Resources.nameForest, false, 4));
-            buildingNames.Add(ItemClass.SubService.IndustrialOre.ToString(), new Markov(Properties.Resources.nameMine, false, 4));
-            buildingNames.Add(ItemClass.SubService.IndustrialOil.ToString(), new Markov(Properties.Resources.nameOil, false, 4));
-
-            buildingDescriptions.Clear();
-            var commercialDescription = new Markov(Properties.Resources.descriptionsCommercial, false, 9);
-            buildingDescriptions.Add(ItemClass.Zone.CommercialHigh.ToString(), commercialDescription);
-            buildingDescriptions.Add(ItemClass.Zone.CommercialLow.ToString(), commercialDescription);
-            var resDescription = new Markov(Properties.Resources.descriptionsResidential, false, 9);
-            buildingDescriptions.Add(ItemClass.Zone.ResidentialHigh.ToString(), resDescription);
-            buildingDescriptions.Add(ItemClass.Zone.ResidentialLow.ToString(), resDescription);
-            var indyDescription = new Markov(Properties.Resources.descriptionsIndustrial, false, 9);
-            buildingDescriptions.Add(ItemClass.Zone.Industrial.ToString(), indyDescription);
-            var officeDescription = new Markov(Properties.Resources.descriptionsOffices, false, 9);
-            buildingDescriptions.Add(ItemClass.Zone.Office.ToString(), officeDescription);
-
-
-            buildingDescriptions.Add(ItemClass.SubService.IndustrialFarming.ToString(), new Markov(Properties.Resources.descriptionsFarm, false, 4));
-            buildingDescriptions.Add(ItemClass.SubService.IndustrialForestry.ToString(), new Markov(Properties.Resources.descriptionsForest, false, 4));
-            buildingDescriptions.Add(ItemClass.SubService.IndustrialOre.ToString(), new Markov(Properties.Resources.descriptionsMine, false, 4));
-            buildingDescriptions.Add(ItemClass.SubService.IndustrialOil.ToString(), new Markov(Properties.Resources.descriptionsOil, false, 4));
-
+            LoadTextFiles();
+            
             descriptionLabel = AddUIComponent<UILabel>();
             descriptionButton = AddUIComponent<UIButton>();
 
             base.Awake();
 
+        }
+
+
+        private void LoadTextFiles()
+        {
+
+            var commercialName = new Markov("nameCommercial", false, 4);
+            buildingNames.Add(ItemClass.Zone.CommercialHigh.ToString(), commercialName);
+            buildingNames.Add(ItemClass.Zone.CommercialLow.ToString(), commercialName);
+            var resName = new Markov("nameResidential", false, 4);
+            buildingNames.Add(ItemClass.Zone.ResidentialHigh.ToString(), resName);
+            buildingNames.Add(ItemClass.Zone.ResidentialLow.ToString(), resName);
+            var indyName = new Markov("nameIndustrial", false, 4);
+            buildingNames.Add(ItemClass.Zone.Industrial.ToString(), indyName);
+            var officeName = new Markov("nameOffice", false, 4);
+            buildingNames.Add(ItemClass.Zone.Office.ToString(), officeName);
+
+            buildingNames.Add(ItemClass.SubService.IndustrialFarming.ToString(), new Markov("nameFarm", false, 4));
+            buildingNames.Add(ItemClass.SubService.IndustrialForestry.ToString(), new Markov("nameForest", false, 4));
+            buildingNames.Add(ItemClass.SubService.IndustrialOre.ToString(), new Markov("nameMine", false, 4));
+            buildingNames.Add(ItemClass.SubService.IndustrialOil.ToString(), new Markov("nameOil", false, 4));
+
+            buildingDescriptions.Clear();
+            var commercialDescription = new Markov("descriptionsCommercial", false, 9);
+            buildingDescriptions.Add(ItemClass.Zone.CommercialHigh.ToString(), commercialDescription);
+            buildingDescriptions.Add(ItemClass.Zone.CommercialLow.ToString(), commercialDescription);
+            var resDescription = new Markov("descriptionsResidential", false, 9);
+            buildingDescriptions.Add(ItemClass.Zone.ResidentialHigh.ToString(), resDescription);
+            buildingDescriptions.Add(ItemClass.Zone.ResidentialLow.ToString(), resDescription);
+            var indyDescription = new Markov("descriptionsIndustrial", false, 9);
+            buildingDescriptions.Add(ItemClass.Zone.Industrial.ToString(), indyDescription);
+            var officeDescription = new Markov("descriptionsOffice", false, 9);
+            buildingDescriptions.Add(ItemClass.Zone.Office.ToString(), officeDescription);
+
+
+            buildingDescriptions.Add(ItemClass.SubService.IndustrialFarming.ToString(), new Markov("descriptionsFarm", false, 4));
+            buildingDescriptions.Add(ItemClass.SubService.IndustrialForestry.ToString(), new Markov("descriptionsForest", false, 4));
+            buildingDescriptions.Add(ItemClass.SubService.IndustrialOre.ToString(), new Markov("descriptionsMine", false, 4));
+            buildingDescriptions.Add(ItemClass.SubService.IndustrialOil.ToString(), new Markov("descriptionsOil", false, 4));
         }
 
         private string GetName(ImmaterialResourceManager.Resource res)
@@ -271,6 +281,12 @@ namespace ExtendedBuildings
                 }
             }
 
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                showDescription = !showName;
+                showName = showDescription;
+            }
+
             base.Update();
         }
 
@@ -313,7 +329,9 @@ namespace ExtendedBuildings
                 {
                     label.Show();
                     resBar.Value.Show();
-                    var value = levelUpHelper.GetServiceScore(resBar.Key, zone, array, num);
+                    int max = 0;
+                    int raw = 0;
+                    var value = levelUpHelper.GetServiceScore(resBar.Key, zone, array, num,ref raw, ref max);
 
                     if (factor > 0)
                     {
@@ -328,9 +346,9 @@ namespace ExtendedBuildings
                         label.relativePosition = new Vector3(negativeX, 56);
                         resBar.Value.relativePosition = new Vector3(negativeX, 36);
                         negativeX += resBar.Value.size.x;
-                        resBar.Value.progressColor = Color.red;
+                        resBar.Value.progressColor = Color.red;                        
                     }
-                    resBar.Value.value = (float)(value / 100f);
+                    SetProgress(resBar.Value, (float)value, 0, 100, raw, max);                
                 }
             }
 
@@ -341,7 +359,7 @@ namespace ExtendedBuildings
 
                 pollutionBar.size = new Vector2((float)(barWidth * -factor / totalNegativeFactor), 16);
                 pollutionLabel.relativePosition = new Vector3(negativeX, 56);
-                pollutionBar.value = (float)value / 100f;
+                SetProgress(pollutionBar, (float)value, 0, 100);
                 pollutionBar.relativePosition = new Vector3(negativeX, 36);
                 negativeX += pollutionBar.size.x;
 
@@ -406,10 +424,13 @@ namespace ExtendedBuildings
                 if (buildingName != null)
                 {
                     var bName = this.buildingName.text;
-                    if ((data.m_flags & Building.Flags.CustomName) == Building.Flags.None && !this.buildingName.hasFocus)
+                    if (showName)
                     {
-                        bName = GetName(buildingId, zone, data.Info.m_class.m_subService);
-                        this.buildingName.text = bName;
+                        if ((data.m_flags & Building.Flags.CustomName) == Building.Flags.None && !this.buildingName.hasFocus)
+                        {
+                            bName = GetName(buildingId, zone, data.Info.m_class.m_subService);
+                            this.buildingName.text = bName;
+                        }
                     }
 
                     if (showDescription)
@@ -462,14 +483,32 @@ namespace ExtendedBuildings
                 }
                 if (markov != null)
                 {
-                    return markov.GetText(ref randomizer, 6, 20, true, true);
+                    return markov.GetText(ref randomizer, 6, 16, true, true);
                 }
             }
             return this.buildingName.text;
         }
 
-        private void SetProgress(UIProgressBar serviceBar, float val, float start, float target)
-        {
+        private void SetProgress(UIProgressBar serviceBar, float val, float start, float target, int raw = -1, int max = -1)
+        {            
+            if (target == int.MaxValue)
+            {
+                serviceBar.tooltip = "Max!";
+            }
+            else if (raw != -1)
+            {
+                serviceBar.tooltip = raw.ToString("F0") + " / " + max.ToString("F0");
+            }
+            else if (start == 0)
+            {
+                serviceBar.tooltip = val.ToString("F0") + " / " + target.ToString("F0");
+
+            }
+            else
+            {
+                serviceBar.tooltip = start.ToString("F0") + " / " + val.ToString("F0") + " / " + target.ToString("F0");
+            }
+
             if (target == int.MaxValue)
             {
                 target = start;

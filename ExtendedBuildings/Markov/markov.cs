@@ -6,6 +6,8 @@ using System.Reflection;
 using System.Text;
 using System.Collections;
 using ColossalFramework.Math;
+using ColossalFramework.Globalization;
+using UnityEngine;
 
 namespace ExtendedBuildings
 {
@@ -16,8 +18,33 @@ namespace ExtendedBuildings
         int n;
         bool isWord;
 
-        public Markov(string resource, bool useWords, int n)
+        public Markov(string resourceName, bool useWords, int n)
         {
+
+            var assembly = Assembly.GetExecutingAssembly();
+            var locale = LocaleManager.cultureInfo;
+            if (locale == null)
+            {
+                locale = new System.Globalization.CultureInfo("en-US");
+            }
+
+
+            resourceName = String.Format("ExtendedBuildings.Markov.{0}.{1}.txt", locale.Name.Substring(0,locale.Name.IndexOf('-')), resourceName);
+
+            if (!assembly.GetManifestResourceNames().Contains(resourceName))
+            {
+                resourceName = String.Format("ExtendedBuildings.Markov.{0}.{1}.txt", "en", resourceName);
+            }
+
+            var resource = "";
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                     resource = reader.ReadToEnd();
+                }
+            }
+
             this.n = n;
             pairs = new Dictionary<string, Ngram>();
             starters = new Dictionary<string, int>();
