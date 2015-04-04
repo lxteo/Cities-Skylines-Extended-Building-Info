@@ -53,10 +53,10 @@
     <Compile Include="ExtendedBuildingsMod.cs" />
     <Compile Include="ExtendedLoading.cs" />
     <Compile Include="Markov\Markov.cs" />
-    <Compile Include="aa\ServiceInfoWindow.cs" />
-    <Compile Include="aa\BuildingInfoWindow.cs" />
-    <Compile Include="aa\CitizenHelper.cs" />
-    <Compile Include="aa\LevelUpHelper.cs" />
+    <Compile Include="Panels\ServiceInfoWindow.cs" />
+    <Compile Include="Panels\BuildingInfoWindow.cs" />
+    <Compile Include="Panels\CitizenHelper.cs" />
+    <Compile Include="Panels\LevelUpHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
