@@ -2,30 +2,30 @@
 	"Language": "pt",
 	"BuildingInfoWindow": {
 		"Awake": {
-			"Pollution": "Poluição"
-			"Resources": {
-				0: "Assistência Médica",
-				1: "Corpo De Bombeiros",
-				2: "Departamento De Polícia",
-				3: "Educação Primária",
-				4: "Ensino Médio",
-				5: "Universidade",
-				6: "Serviço Necrotério",
-				7: "Transporte Público",
-				8: "Poluição Sonora",
-				9: "Taxa De Crime",
-				10: "Saúde",
-				11: "Bem-estar",
-				12: "Densidade",
-				13: "Diversão",
-				14: "Valor da Terra",
-				15: "Atração",
-				16: "Cobertura",
-				17: "Risco de Incêndio",
-				18: "Abandono",
-				19: "Transporte de Cargas",
-				255: "Nenhum"
-			}
+			"Pollution": "Poluição",
+			"Resources": [
+				"Assistência Médica",
+				"Corpo De Bombeiros",
+				"Departamento De Polícia",
+				"Educação Primária",
+				"Ensino Médio",
+				"Universidade",
+				"Serviço Necrotério",
+				"Transporte Público",
+				"Poluição Sonora",
+				"Taxa De Crime",
+				"Saúde",
+				"Bem-estar",
+				"Densidade",
+				"Diversão",
+				"Valor da Terra",
+				"Atração",
+				"Cobertura",
+				"Risco de Incêndio",
+				"Abandono",
+				"Transporte de Cargas",
+				"Nenhum"
+			]
 		},
 		"GetName": {
 			"FireDepartment": "Bomb.",
