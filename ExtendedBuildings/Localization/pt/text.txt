@@ -1,0 +1,49 @@
+﻿BuildingInfo:
+HealthCare Saúde
+FireDepartment Bomb.
+PoliceDepartment Pol.
+EducationElementary Edu. 1ª
+EducationHighSchool Edu. 2ª
+EducationUniversity Univ.
+DeathCare Necro.
+PublicTransport Transp.
+NoisePollution Ruído
+CrimeRate Taxa De Crime
+Health Saúde
+Wellbeing Bem-estar
+Density Densidade
+Entertainment Pques.
+LandValue Land Value
+Attractiveness Attractiveness
+Coverage Cobertura
+FireHazard Risco de Incêndio
+Abandonment Abandono
+CargoTransport Carga
+Pollution: Poluição
+
+Service Progresso do Serviço
+ServiceDescription O progresso até o próximo nível, pontuação combinada de fatores mostrado acima.
+
+Education Progresso da Educação
+EducationDescription O progresso até o próximo nível.
+
+Happiness Felicidade
+HappinessDescription A felicidade média.
+
+Wealth Progresso da Riqueza
+LandValueProgress Progresso em Valor da Terra
+Max O Máx!
+
+ServiceInfo:
+Radius Raio
+FireFighting Combate a Incêndios
+KittensSaved Gatinhos Salvos
+Entertainment Diversão
+Attractiveness Atractividade
+Healthcare Assistência Médica
+Deathcare Assistência Necrotério
+Llamas Selvagens Avistados
+ClassesSkipped Aolas Pulado
+Education Educação
+Police Polícia
+Cargo Carga

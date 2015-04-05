@@ -45,8 +45,9 @@ namespace ExtendedBuildings
             }
 
             var buildingId = GetParentInstanceId().Building;
-            if (lastSelected != buildingId)
+            if (this.enabled && info.isVisible && BuildingManager.instance != null && ((SimulationManager.instance.m_currentFrameIndex & 15u) == 15u || lastSelected != buildingId))
             {
+                Debug.Log("running");
                 lastSelected = buildingId;
                 Building data = BuildingManager.instance.m_buildings.m_buffer[buildingId];
                 var service = data.Info.m_class.m_service;
@@ -64,72 +65,71 @@ namespace ExtendedBuildings
                 if (ai is FireStationAI)
                 {
                     var strength = (int)(((FireStationAI)data.Info.m_buildingAI).m_fireDepartmentAccumulation * productionRate / 100);
-                    sb.AppendLine("Fire Fighting: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "FireFighting") + ": " + strength.ToString());
                     var radius = (int)(((FireStationAI)data.Info.m_buildingAI).m_fireDepartmentRadius / 8);
-                    sb.AppendLine("Radius: " + radius.ToString());
-                    sb.AppendLine("Kittens Saved: " + GetLlamaSightings(1.4));
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "KittensSaved") + ": " + GetLlamaSightings(1.4));
                     ii +=3;
                 }
                 else if (ai is MonumentAI)
                 {
                     var strength = (int)(((MonumentAI)data.Info.m_buildingAI).m_entertainmentAccumulation * productionRate / 100);
-                    sb.AppendLine("Entertainment: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Entertainment") + ": " + strength.ToString());
                     var radius = (int)(((MonumentAI)data.Info.m_buildingAI).m_entertainmentRadius  / 8);
-                    sb.AppendLine("Radius: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
                     var tourism = (int)(((MonumentAI)data.Info.m_buildingAI).m_attractivenessAccumulation * productionRate / 100);
-                    sb.AppendLine("Attractiveness: " + tourism);
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Attractiveness") + ": " + tourism);
                     ii += 3;
                 }
                 else if (ai is HospitalAI){
                     
                     var strength = (int)(((HospitalAI)data.Info.m_buildingAI).m_healthCareAccumulation * productionRate / 100);
-                    sb.AppendLine("Healthcare: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + strength.ToString());
                     var radius = (int)(((HospitalAI)data.Info.m_buildingAI).m_healthCareRadius  / 8);
-                    sb.AppendLine("Radius: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Healthcare") + ": " + radius.ToString());
                     ii += 2;
                 }
                  else if (ai is CemeteryAI)
                 {
                     var strength = (int)(((CemeteryAI)data.Info.m_buildingAI).m_deathCareAccumulation * productionRate / 100);
-                    sb.AppendLine("Deathcare: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Deathcare") + ": " + strength.ToString());
                     var radius = (int)(((CemeteryAI)data.Info.m_buildingAI).m_deathCareRadius / 8);
-                    sb.AppendLine("Radius: " + strength.ToString());
-                    sb.AppendLine("Bodies Misplaced: " + GetLlamaSightings(0.4));
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
                     ii += 3;
                 }
                  else if (ai is ParkAI)
                 {
                     var strength = (int)(((ParkAI)data.Info.m_buildingAI).m_entertainmentAccumulation * productionRate / 100);
-                    sb.AppendLine("Entertainment: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Entertainment") + ": " + strength.ToString());
                     var radius = (int)(((ParkAI)data.Info.m_buildingAI).m_entertainmentRadius / 8);
-                    sb.AppendLine("Radius: " + strength.ToString());
-                    sb.AppendLine("Llamas Sighted: " + GetLlamaSightings(2));
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Llamas") + ": " + GetLlamaSightings(2));
                     ii += 3;
                 }
                  else if (ai is SchoolAI)
                 {
                     var strength = (int)(((SchoolAI)data.Info.m_buildingAI).m_educationAccumulation * productionRate / 100);
-                    sb.AppendLine("Education: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Education") + ": " + strength.ToString());
                     var radius = (int)(((SchoolAI)data.Info.m_buildingAI).m_educationRadius / 8);
-                    sb.AppendLine("Radius: " + strength.ToString());
-                    sb.AppendLine("Classes Skipped: " + GetLlamaSightings(2));
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "ClassesSkipped") + ": " + GetLlamaSightings(2));
                     ii += 3;
 
                 }
                  else if (ai is PoliceStationAI)
                 {
                     var strength = (int)(((PoliceStationAI)data.Info.m_buildingAI).m_policeDepartmentAccumulation * productionRate / 100);
-                    sb.AppendLine("Police: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Police") + ": " + strength.ToString());
                     var radius = (int)(((PoliceStationAI)data.Info.m_buildingAI).m_policeDepartmentRadius  / 8);
-                    sb.AppendLine("Radius: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
                     ii += 2;
                 }
                 else if (ai is CargoStationAI)
                 {
                     var strength = (int)(((CargoStationAI)data.Info.m_buildingAI).m_cargoTransportAccumulation * productionRate / 100);
-                    sb.AppendLine("Cargo: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Cargo") + ": " + strength.ToString());
                     var radius = (int)(((CargoStationAI)data.Info.m_buildingAI).m_cargoTransportRadius / 8);
-                    sb.AppendLine("Radius: " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
                     ii += 2;
                 }
                 label1.relativePosition = new Vector3(0, info.height + info.relativePosition.y - 14 * ii);

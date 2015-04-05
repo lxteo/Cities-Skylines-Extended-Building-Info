@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="ExtendedBuildingsMod.cs" />
     <Compile Include="ExtendedLoading.cs" />
+    <Compile Include="Localization\Localization.cs" />
     <Compile Include="Markov\Markov.cs" />
     <Compile Include="Panels\ServiceInfoWindow.cs" />
     <Compile Include="Panels\BuildingInfoWindow.cs" />
@@ -60,42 +61,110 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Markov\en\descriptionsFarm.txt" />
-    <EmbeddedResource Include="Markov\en\descriptionsMine.txt" />
-    <EmbeddedResource Include="Markov\en\descriptionsForest.txt" />
-    <EmbeddedResource Include="Markov\en\descriptionsCommercial.txt" />
-    <EmbeddedResource Include="Markov\en\descriptionsResidential.txt" />
-    <EmbeddedResource Include="Markov\en\descriptionsOffice.txt" />
-    <EmbeddedResource Include="Markov\en\descriptionsIndustrial.txt" />
-    <EmbeddedResource Include="Markov\en\descriptionsOil.txt" />
-    <EmbeddedResource Include="Markov\en\nameCommercial.txt" />
-    <EmbeddedResource Include="Markov\en\nameFarm.txt" />
-    <EmbeddedResource Include="Markov\en\nameForest.txt" />
-    <EmbeddedResource Include="Markov\en\nameMine.txt" />
-    <EmbeddedResource Include="Markov\en\nameOffice.txt" />
-    <EmbeddedResource Include="Markov\en\nameOil.txt" />
-    <EmbeddedResource Include="Markov\en\nameIndustrial.txt" />
-    <EmbeddedResource Include="Markov\en\nameResidential.txt" />
-    <EmbeddedResource Include="Markov\pt\descriptionsCommercial.txt" />
-    <EmbeddedResource Include="Markov\pt\descriptionsFarm.txt" />
-    <EmbeddedResource Include="Markov\pt\descriptionsForest.txt" />
-    <EmbeddedResource Include="Markov\pt\descriptionsIndustrial.txt" />
-    <EmbeddedResource Include="Markov\pt\descriptionsMine.txt" />
-    <EmbeddedResource Include="Markov\pt\descriptionsOffice.txt" />
-    <EmbeddedResource Include="Markov\pt\descriptionsOil.txt" />
-    <EmbeddedResource Include="Markov\pt\descriptionsResidential.txt" />
-    <EmbeddedResource Include="Markov\pt\nameCommercial.txt" />
-    <EmbeddedResource Include="Markov\pt\nameFarm.txt" />
-    <EmbeddedResource Include="Markov\pt\nameForest.txt" />
-    <EmbeddedResource Include="Markov\pt\nameIndustrial.txt" />
-    <EmbeddedResource Include="Markov\pt\nameMine.txt" />
-    <EmbeddedResource Include="Markov\pt\nameOffice.txt" />
-    <EmbeddedResource Include="Markov\pt\nameOil.txt" />
-    <EmbeddedResource Include="Markov\pt\nameResidential.txt" />
+    <Folder Include="Localization\de\" />
+    <Folder Include="Localization\ko\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Markov\de\" />
-    <Folder Include="Markov\ko\" />
+    <EmbeddedResource Include="Localization\pt\descriptionsCommercial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\descriptionsFarm.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\descriptionsForest.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\descriptionsIndustrial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\descriptionsMine.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\descriptionsOffice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\descriptionsOil.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\descriptionsResidential.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\nameCommercial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\nameFarm.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\nameForest.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\nameIndustrial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\nameMine.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\nameOffice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\nameOil.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\nameResidential.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\descriptionsCommercial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\descriptionsFarm.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\descriptionsForest.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\descriptionsIndustrial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\descriptionsMine.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\descriptionsOffice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\descriptionsOil.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\descriptionsResidential.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\nameCommercial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\nameFarm.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\nameForest.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\nameIndustrial.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\nameMine.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\nameOffice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\nameOil.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\nameResidential.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\en\text.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\pt\text.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

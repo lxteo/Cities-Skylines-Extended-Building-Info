@@ -16,7 +16,7 @@ namespace ExtendedBuildings
     using System.Timers;
     using UnityEngine;
 
-    public class BuildingInfoWindow4 : UIPanel
+    public class BuildingInfoWindow5 : UIPanel
     {
         const float vertPadding = 26;
         float barWidth;
@@ -65,7 +65,7 @@ namespace ExtendedBuildings
                 bar.progressColor = Color.green;
                 resourceBars.Add(res, bar);
                 var label = AddUIComponent<UILabel>();
-                label.text = GetName(res);
+                label.text = Localization.Get(LocalizationCategory.BuildingInfo, res.ToString());
                 label.textScale = 0.5f;
                 label.size = new Vector2(100, 20);
                 resourceLabels.Add(res, label);
@@ -76,7 +76,7 @@ namespace ExtendedBuildings
             pollutionBar.progressSprite = "LevelBarForeground";
             pollutionBar.progressColor = Color.red;
             pollutionLabel = AddUIComponent<UILabel>();
-            pollutionLabel.text = "Pollution";
+            pollutionLabel.text = Localization.Get(LocalizationCategory.BuildingInfo, "Pollution");
             pollutionLabel.textScale = 0.5f;
             pollutionLabel.size = new Vector2(100, 20);
 
@@ -138,37 +138,6 @@ namespace ExtendedBuildings
             buildingDescriptions.Add(ItemClass.SubService.IndustrialOil.ToString(), new Markov("descriptionsOil", false, 4));
         }
 
-        private string GetName(ImmaterialResourceManager.Resource res)
-        {
-            switch (res)
-            {
-                case ImmaterialResourceManager.Resource.FireDepartment:
-                    return "Fire";
-                case ImmaterialResourceManager.Resource.PoliceDepartment:
-                    return "Police";
-                case ImmaterialResourceManager.Resource.PublicTransport:
-                    return "Transp.";
-                case ImmaterialResourceManager.Resource.Abandonment:
-                    return "Abandonment";
-                case ImmaterialResourceManager.Resource.Entertainment:
-                    return "Parks";
-                case ImmaterialResourceManager.Resource.NoisePollution:
-                    return "Noise";
-                case ImmaterialResourceManager.Resource.CargoTransport:
-                    return "Cargo";
-                case ImmaterialResourceManager.Resource.EducationElementary:
-                    return "Elem.";
-                case ImmaterialResourceManager.Resource.EducationHighSchool:
-                    return "High Sch.";
-                case ImmaterialResourceManager.Resource.EducationUniversity:
-                    return "Uni.";
-                case ImmaterialResourceManager.Resource.HealthCare:
-                    return "Health";
-                case ImmaterialResourceManager.Resource.DeathCare:
-                    return "Death";
-            }
-            return res.ToString();
-        }
 
         public override void Start()
         {
@@ -189,22 +158,22 @@ namespace ExtendedBuildings
             barWidth = this.size.x - 28;
             float y = 70;
 
-            SetLabel(serviceLabel, "Service Progress");
+            SetLabel(serviceLabel, Localization.Get(LocalizationCategory.BuildingInfo, "Service"));
             SetBar(serviceBar);
-            serviceBar.tooltip = "Progress until next level, combined score of factors shown above.";
-            serviceLabel.tooltip = "Progress until next level, combined score of factors shown above.";
+            serviceBar.tooltip = Localization.Get(LocalizationCategory.BuildingInfo, "ServiceDescription") + " 0/0";
+            serviceLabel.tooltip = Localization.Get(LocalizationCategory.BuildingInfo, "ServiceDescription");
             y += vertPadding;
 
-            SetLabel(educationLabel, "Education Progress");
+            SetLabel(educationLabel, Localization.Get(LocalizationCategory.BuildingInfo, "Education"));
             SetBar(educationBar);
-            educationBar.tooltip = "Progress until next level.";
-            educationLabel.tooltip = "Progress until next level.";
+            educationBar.tooltip = Localization.Get(LocalizationCategory.BuildingInfo, "EducationDescription") + " 0/0";
+            educationLabel.tooltip = Localization.Get(LocalizationCategory.BuildingInfo, "EducationDescription");
             y += vertPadding;
 
-            SetLabel(happyLabel, "Happiness");
+            SetLabel(happyLabel, Localization.Get(LocalizationCategory.BuildingInfo, "Happiness"));
             SetBar(happyBar);
-            happyBar.tooltip = "Average happiness.";
-            happyLabel.tooltip = "Average happiness.";
+            happyBar.tooltip = Localization.Get(LocalizationCategory.BuildingInfo, "HappinessDescription") + " 0/0";
+            happyLabel.tooltip = Localization.Get(LocalizationCategory.BuildingInfo, "HappinessDescription");
 
             SetLabel(descriptionLabel, "Happiness");
             descriptionLabel.textScale = 0.65f;
@@ -379,11 +348,11 @@ namespace ExtendedBuildings
 
             if (zone == ItemClass.Zone.ResidentialHigh || zone == ItemClass.Zone.ResidentialLow || zone == ItemClass.Zone.CommercialHigh || zone == ItemClass.Zone.CommercialLow)
             {
-                serviceLabel.text = "Land Value Progress";
+                serviceLabel.text = Localization.Get(LocalizationCategory.BuildingInfo, "LandValueProgress");
             }
             else
             {
-                serviceLabel.text = "Service Progress";
+                serviceLabel.text = Localization.Get(LocalizationCategory.BuildingInfo, "Service");
             }
             y += vertPadding;
 
@@ -399,11 +368,11 @@ namespace ExtendedBuildings
 
             if (zone == ItemClass.Zone.CommercialHigh || zone == ItemClass.Zone.CommercialLow)
             {
-                educationLabel.text = "Wealth Progress";
+                educationLabel.text = Localization.Get(LocalizationCategory.BuildingInfo, "Wealth");
             }
             else
             {
-                educationLabel.text = "Education Progress";
+                educationLabel.text = Localization.Get(LocalizationCategory.BuildingInfo, "Education");
             }
 
             SetProgress(happyBar, happy, 0, 100);
@@ -490,25 +459,35 @@ namespace ExtendedBuildings
         }
 
         private void SetProgress(UIProgressBar serviceBar, float val, float start, float target, int raw = -1, int max = -1)
-        {            
+        {
+            var extraTip = "";
             if (target == int.MaxValue)
             {
-                serviceBar.tooltip = "Max!";
+                extraTip = Localization.Get(LocalizationCategory.BuildingInfo, "Max");
             }
             else if (raw != -1)
             {
-                serviceBar.tooltip = raw.ToString("F0") + " / " + max.ToString("F0");
+                extraTip = raw.ToString("F0") + "/" + max.ToString("F0");
             }
             else if (start == 0)
             {
-                serviceBar.tooltip = val.ToString("F0") + " / " + target.ToString("F0");
+                extraTip = val.ToString("F0") + "/" + target.ToString("F0");
 
             }
             else
             {
-                serviceBar.tooltip = start.ToString("F0") + " / " + val.ToString("F0") + " / " + target.ToString("F0");
+                extraTip = start.ToString("F0") + "/" + val.ToString("F0") + "/" + target.ToString("F0");
             }
 
+            var lastIndex = serviceBar.tooltip.LastIndexOf(' ');
+            if (lastIndex > 0)
+            {
+                serviceBar.tooltip = serviceBar.tooltip.Substring(0, lastIndex) + " " + extraTip;
+            }
+            else
+            {
+                serviceBar.tooltip = extraTip;
+            }
             if (target == int.MaxValue)
             {
                 target = start;
