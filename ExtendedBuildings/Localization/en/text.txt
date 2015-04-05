@@ -1,0 +1,49 @@
+﻿BuildingInfo:
+HealthCare Health
+FireDepartment Fire
+PoliceDepartment Police
+EducationElementary Elem.
+EducationHighSchool High Sch.
+EducationUniversity Uni.
+DeathCare Death
+PublicTransport Transp.
+NoisePollution Noise
+CrimeRate Crime
+Health Health
+Wellbeing Happiness
+Density Density
+Entertainment Parks
+LandValue Land Value
+Attractiveness Attractiveness
+Coverage Coverage
+FireHazard Fire Hazard
+Abandonment Abandonment
+CargoTransport Cargo
+Pollution: Pollution
+
+Service Service Progress
+ServiceDescription Progress until next level, combined score of factors shown above.
+
+Education Education Progress
+EducationDescription Education progress until next level.
+
+Happiness Happiness
+HappinessDescription Progress until next level, combined score of factors shown above.
+
+Wealth Wealth Progress
+LandValueProgress Land Value Progress
+Max Max!
+
+ServiceInfo:
+Radius Radius
+FireFighting Fire Fighting
+KittensSaved Kittens Saved
+Entertainment Entertainment
+Attractiveness Attractiveness
+Healthcare Healthcare
+Deathcare Deathcare
+Llamas Llamas Sighted
+ClassesSkipped Classes Skipped
+Education Education
+Police Police
+Cargo Cargo Transport
