@@ -16,11 +16,7 @@ namespace ExtendedBuildings
     using System.Timers;
     using UnityEngine;
 
-<<<<<<< HEAD:ExtendedBuildings/Panels/BuildingInfoWindow.cs
-    public class BuildingInfoWindow4 : UIPanel
-=======
     public class BuildingInfoWindow5 : UIPanel
->>>>>>> lxteo/master:ExtendedBuildings/Panels/BuildingInfoWindow.cs
     {
         const float vertPadding = 26;
         float barWidth;
@@ -463,20 +459,6 @@ namespace ExtendedBuildings
         }
 
         private void SetProgress(UIProgressBar serviceBar, float val, float start, float target, int raw = -1, int max = -1)
-<<<<<<< HEAD:ExtendedBuildings/Panels/BuildingInfoWindow.cs
-        {            
-            if (target == int.MaxValue)
-            {
-                serviceBar.tooltip = "Max!";
-            }
-            else if (raw != -1)
-            {
-                serviceBar.tooltip = raw.ToString("F0") + " / " + max.ToString("F0");
-            }
-            else if (start == 0)
-            {
-                serviceBar.tooltip = val.ToString("F0") + " / " + target.ToString("F0");
-=======
         {
             var extraTip = "";
             if (target == int.MaxValue)
@@ -490,16 +472,10 @@ namespace ExtendedBuildings
             else if (start == 0)
             {
                 extraTip = val.ToString("F0") + "/" + target.ToString("F0");
->>>>>>> lxteo/master:ExtendedBuildings/Panels/BuildingInfoWindow.cs
 
             }
             else
             {
-<<<<<<< HEAD:ExtendedBuildings/Panels/BuildingInfoWindow.cs
-                serviceBar.tooltip = start.ToString("F0") + " / " + val.ToString("F0") + " / " + target.ToString("F0");
-            }
-
-=======
                 extraTip = start.ToString("F0") + "/" + val.ToString("F0") + "/" + target.ToString("F0");
             }
 
@@ -512,7 +488,6 @@ namespace ExtendedBuildings
             {
                 serviceBar.tooltip = extraTip;
             }
->>>>>>> lxteo/master:ExtendedBuildings/Panels/BuildingInfoWindow.cs
             if (target == int.MaxValue)
             {
                 target = start;
