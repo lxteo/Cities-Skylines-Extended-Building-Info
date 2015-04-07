@@ -11,7 +11,11 @@ namespace ExtendedBuildings
     public class ExtendedLoading : LoadingExtensionBase
     {
         static GameObject buildingWindowGameObject;
+<<<<<<< HEAD
+        BuildingInfoWindow4 buildingWindow;
+=======
         BuildingInfoWindow5 buildingWindow;
+>>>>>>> lxteo/master
         ServiceInfoWindow2 serviceWindow;
         private LoadMode _mode;
 
@@ -24,7 +28,11 @@ namespace ExtendedBuildings
             buildingWindowGameObject = new GameObject("buildingWindowObject");
 
             var buildingInfo = UIView.Find<UIPanel>("(Library) ZonedBuildingWorldInfoPanel");
+<<<<<<< HEAD
+            this.buildingWindow = buildingWindowGameObject.AddComponent<BuildingInfoWindow4>();
+=======
             this.buildingWindow = buildingWindowGameObject.AddComponent<BuildingInfoWindow5>();
+>>>>>>> lxteo/master
             this.buildingWindow.transform.parent = buildingInfo.transform;
             this.buildingWindow.size = new Vector3(buildingInfo.size.x, buildingInfo.size.y);
             this.buildingWindow.baseBuildingWindow = buildingInfo.gameObject.transform.GetComponentInChildren<ZonedBuildingWorldInfoPanel>();

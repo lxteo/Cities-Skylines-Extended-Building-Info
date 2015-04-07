@@ -61,6 +61,44 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Markov\en\descriptionsFarm.txt" />
+    <EmbeddedResource Include="Markov\en\descriptionsMine.txt" />
+    <EmbeddedResource Include="Markov\en\descriptionsForest.txt" />
+    <EmbeddedResource Include="Markov\en\descriptionsCommercial.txt" />
+    <EmbeddedResource Include="Markov\en\descriptionsResidential.txt" />
+    <EmbeddedResource Include="Markov\en\descriptionsOffice.txt" />
+    <EmbeddedResource Include="Markov\en\descriptionsIndustrial.txt" />
+    <EmbeddedResource Include="Markov\en\descriptionsOil.txt" />
+    <EmbeddedResource Include="Markov\en\nameCommercial.txt" />
+    <EmbeddedResource Include="Markov\en\nameFarm.txt" />
+    <EmbeddedResource Include="Markov\en\nameForest.txt" />
+    <EmbeddedResource Include="Markov\en\nameMine.txt" />
+    <EmbeddedResource Include="Markov\en\nameOffice.txt" />
+    <EmbeddedResource Include="Markov\en\nameOil.txt" />
+    <EmbeddedResource Include="Markov\en\nameIndustrial.txt" />
+    <EmbeddedResource Include="Markov\en\nameResidential.txt" />
+    <EmbeddedResource Include="Markov\pt\descriptionsCommercial.txt" />
+    <EmbeddedResource Include="Markov\pt\descriptionsFarm.txt" />
+    <EmbeddedResource Include="Markov\pt\descriptionsForest.txt" />
+    <EmbeddedResource Include="Markov\pt\descriptionsIndustrial.txt" />
+    <EmbeddedResource Include="Markov\pt\descriptionsMine.txt" />
+    <EmbeddedResource Include="Markov\pt\descriptionsOffice.txt" />
+    <EmbeddedResource Include="Markov\pt\descriptionsOil.txt" />
+    <EmbeddedResource Include="Markov\pt\descriptionsResidential.txt" />
+    <EmbeddedResource Include="Markov\pt\nameCommercial.txt" />
+    <EmbeddedResource Include="Markov\pt\nameFarm.txt" />
+    <EmbeddedResource Include="Markov\pt\nameForest.txt" />
+    <EmbeddedResource Include="Markov\pt\nameIndustrial.txt" />
+    <EmbeddedResource Include="Markov\pt\nameMine.txt" />
+    <EmbeddedResource Include="Markov\pt\nameOffice.txt" />
+    <EmbeddedResource Include="Markov\pt\nameOil.txt" />
+    <EmbeddedResource Include="Markov\pt\nameResidential.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Markov\de\" />
+    <Folder Include="Markov\ko\" />
+=======
     <Folder Include="Localization\de\" />
     <Folder Include="Localization\ko\" />
   </ItemGroup>
@@ -165,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\pt\text.txt" />
+>>>>>>> lxteo/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

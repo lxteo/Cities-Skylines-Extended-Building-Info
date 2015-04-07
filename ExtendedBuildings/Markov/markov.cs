@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 using ColossalFramework.Math;
+<<<<<<< HEAD
+using ColossalFramework.Globalization;
+=======
+>>>>>>> lxteo/master
 using UnityEngine;
 
 namespace ExtendedBuildings
@@ -17,7 +21,35 @@ namespace ExtendedBuildings
 
         public Markov(string resourceName, bool useWords, int n)
         {
+<<<<<<< HEAD
+
+            var assembly = Assembly.GetExecutingAssembly();
+            var locale = LocaleManager.cultureInfo;
+            if (locale == null)
+            {
+                locale = new System.Globalization.CultureInfo("en-US");
+            }
+
+
+            resourceName = String.Format("ExtendedBuildings.Markov.{0}.{1}.txt", locale.Name.Substring(0,locale.Name.IndexOf('-')), resourceName);
+
+            if (!assembly.GetManifestResourceNames().Contains(resourceName))
+            {
+                resourceName = String.Format("ExtendedBuildings.Markov.{0}.{1}.txt", "en", resourceName);
+            }
+
+            var resource = "";
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                     resource = reader.ReadToEnd();
+                }
+            }
+
+=======
             var resource = Localization.Get(LocalizationCategory.Markov, resourceName);           
+>>>>>>> lxteo/master
             this.n = n;
 
             pairs = new Dictionary<string, Ngram>();
