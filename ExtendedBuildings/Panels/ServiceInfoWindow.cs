@@ -84,9 +84,9 @@ namespace ExtendedBuildings
                 else if (ai is HospitalAI){
                     
                     var strength = (int)(((HospitalAI)data.Info.m_buildingAI).m_healthCareAccumulation * productionRate / 100);
-                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + strength.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Healthcare") + ": " + strength.ToString());
                     var radius = (int)(((HospitalAI)data.Info.m_buildingAI).m_healthCareRadius  / 8);
-                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Healthcare") + ": " + radius.ToString());
+                    sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
                     ii += 2;
                 }
                  else if (ai is CemeteryAI)
