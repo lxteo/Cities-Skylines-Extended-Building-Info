@@ -15,6 +15,7 @@ namespace ExtendedBuildings
         UILabel label1;
         FieldInfo baseSub;
 
+        private static readonly int LabelYOffset = 50;
         CityServiceWorldInfoPanel m_servicePanel;
         public CityServiceWorldInfoPanel servicePanel
         {
@@ -27,7 +28,7 @@ namespace ExtendedBuildings
                 label1.color = info.color;
                 label1.textColor = info.textColor;
                 label1.textScale = info.textScale;
-                label1.relativePosition = new Vector3(0, info.height + info.relativePosition.y - 40);
+                label1.relativePosition = new Vector3(0, info.height + info.relativePosition.y - 40 - LabelYOffset);
                 label1.size = new Vector2(230, 84);
                 label1.font = info.font;
 
@@ -132,7 +133,7 @@ namespace ExtendedBuildings
                     sb.AppendLine(Localization.Get(LocalizationCategory.ServiceInfo, "Radius") + ": " + radius.ToString());
                     ii += 2;
                 }
-                label1.relativePosition = new Vector3(0, info.height + info.relativePosition.y - 14 * ii);
+                label1.relativePosition = new Vector3(0, info.height + info.relativePosition.y - 14 * ii - LabelYOffset);
                 label1.text = sb.ToString();
             }
             
