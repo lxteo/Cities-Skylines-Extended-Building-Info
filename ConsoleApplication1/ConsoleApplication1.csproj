@@ -34,7 +34,7 @@
   <ItemGroup>
     <Reference Include="ColossalManaged, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExtendedBuildings\libs\ColossalManaged.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\SteamApps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
